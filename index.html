@@ -1,0 +1,1118 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="generator" content="pandoc">
+  <meta name="author" content="Rick O. Gilmore" />
+  <title>Reproducibility in behavioral science</title>
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
+  <link rel="stylesheet" href="libs/reveal.js-3.3.0.1/css/reveal.css"/>
+
+
+
+<link rel="stylesheet" href="libs/reveal.js-3.3.0.1/css/theme/simple.css" id="theme">
+
+
+  <!-- some tweaks to reveal css -->
+  <style type="text/css">
+    .reveal h1 { font-size: 2.0em; }
+    .reveal h2 { font-size: 1.5em;  }
+    .reveal h3 { font-size: 1.25em;	}
+    .reveal h4 { font-size: 1em;	}
+
+    .reveal .slides>section,
+    .reveal .slides>section>section {
+      padding: 0px 0px;
+    }
+
+
+
+    .reveal table {
+      border-width: 1px;
+      border-spacing: 2px;
+      border-style: dotted;
+      border-color: gray;
+      border-collapse: collapse;
+      font-size: 0.7em;
+    }
+
+    .reveal table th {
+      border-width: 1px;
+      padding-left: 10px;
+      padding-right: 25px;
+      font-weight: bold;
+      border-style: dotted;
+      border-color: gray;
+    }
+
+    .reveal table td {
+      border-width: 1px;
+      padding-left: 10px;
+      padding-right: 25px;
+      border-style: dotted;
+      border-color: gray;
+    }
+
+
+  </style>
+
+    <style type="text/css">code{white-space: pre;}</style>
+
+
+<!-- Printing and PDF exports -->
+<script id="paper-css" type="application/dynamic-css">
+
+/* Default Print Stylesheet Template
+   by Rob Glazebrook of CSSnewbie.com
+   Last Updated: June 4, 2008
+
+   Feel free (nay, compelled) to edit, append, and
+   manipulate this file as you see fit. */
+
+
+@media print {
+
+	/* SECTION 1: Set default width, margin, float, and
+	   background. This prevents elements from extending
+	   beyond the edge of the printed page, and prevents
+	   unnecessary background images from printing */
+	html {
+		background: #fff;
+		width: auto;
+		height: auto;
+		overflow: visible;
+	}
+	body {
+		background: #fff;
+		font-size: 20pt;
+		width: auto;
+		height: auto;
+		border: 0;
+		margin: 0 5%;
+		padding: 0;
+		overflow: visible;
+		float: none !important;
+	}
+
+	/* SECTION 2: Remove any elements not needed in print.
+	   This would include navigation, ads, sidebars, etc. */
+	.nestedarrow,
+	.controls,
+	.fork-reveal,
+	.share-reveal,
+	.state-background,
+	.reveal .progress,
+	.reveal .backgrounds {
+		display: none !important;
+	}
+
+	/* SECTION 3: Set body font face, size, and color.
+	   Consider using a serif font for readability. */
+	body, p, td, li, div {
+		font-size: 20pt!important;
+		font-family: Georgia, "Times New Roman", Times, serif !important;
+		color: #000;
+	}
+
+	/* SECTION 4: Set heading font face, sizes, and color.
+	   Differentiate your headings from your body text.
+	   Perhaps use a large sans-serif for distinction. */
+	h1,h2,h3,h4,h5,h6 {
+		color: #000!important;
+		height: auto;
+		line-height: normal;
+		font-family: Georgia, "Times New Roman", Times, serif !important;
+		text-shadow: 0 0 0 #000 !important;
+		text-align: left;
+		letter-spacing: normal;
+	}
+	/* Need to reduce the size of the fonts for printing */
+	h1 { font-size: 28pt !important;  }
+	h2 { font-size: 24pt !important; }
+	h3 { font-size: 22pt !important; }
+	h4 { font-size: 22pt !important; font-variant: small-caps; }
+	h5 { font-size: 21pt !important; }
+	h6 { font-size: 20pt !important; font-style: italic; }
+
+	/* SECTION 5: Make hyperlinks more usable.
+	   Ensure links are underlined, and consider appending
+	   the URL to the end of the link for usability. */
+	a:link,
+	a:visited {
+		color: #000 !important;
+		font-weight: bold;
+		text-decoration: underline;
+	}
+	/*
+	.reveal a:link:after,
+	.reveal a:visited:after {
+		content: " (" attr(href) ") ";
+		color: #222 !important;
+		font-size: 90%;
+	}
+	*/
+
+
+	/* SECTION 6: more reveal.js specific additions by @skypanther */
+	ul, ol, div, p {
+		visibility: visible;
+		position: static;
+		width: auto;
+		height: auto;
+		display: block;
+		overflow: visible;
+		margin: 0;
+		text-align: left !important;
+	}
+	.reveal pre,
+	.reveal table {
+		margin-left: 0;
+		margin-right: 0;
+	}
+	.reveal pre code {
+		padding: 20px;
+		border: 1px solid #ddd;
+	}
+	.reveal blockquote {
+		margin: 20px 0;
+	}
+	.reveal .slides {
+		position: static !important;
+		width: auto !important;
+		height: auto !important;
+
+		left: 0 !important;
+		top: 0 !important;
+		margin-left: 0 !important;
+		margin-top: 0 !important;
+		padding: 0 !important;
+		zoom: 1 !important;
+
+		overflow: visible !important;
+		display: block !important;
+
+		text-align: left !important;
+		-webkit-perspective: none;
+		   -moz-perspective: none;
+		    -ms-perspective: none;
+		        perspective: none;
+
+		-webkit-perspective-origin: 50% 50%;
+		   -moz-perspective-origin: 50% 50%;
+		    -ms-perspective-origin: 50% 50%;
+		        perspective-origin: 50% 50%;
+	}
+	.reveal .slides section {
+		visibility: visible !important;
+		position: static !important;
+		width: auto !important;
+		height: auto !important;
+		display: block !important;
+		overflow: visible !important;
+
+		left: 0 !important;
+		top: 0 !important;
+		margin-left: 0 !important;
+		margin-top: 0 !important;
+		padding: 60px 20px !important;
+		z-index: auto !important;
+
+		opacity: 1 !important;
+
+		page-break-after: always !important;
+
+		-webkit-transform-style: flat !important;
+		   -moz-transform-style: flat !important;
+		    -ms-transform-style: flat !important;
+		        transform-style: flat !important;
+
+		-webkit-transform: none !important;
+		   -moz-transform: none !important;
+		    -ms-transform: none !important;
+		        transform: none !important;
+
+		-webkit-transition: none !important;
+		   -moz-transition: none !important;
+		    -ms-transition: none !important;
+		        transition: none !important;
+	}
+	.reveal .slides section.stack {
+		padding: 0 !important;
+	}
+	.reveal section:last-of-type {
+		page-break-after: avoid !important;
+	}
+	.reveal section .fragment {
+		opacity: 1 !important;
+		visibility: visible !important;
+
+		-webkit-transform: none !important;
+		   -moz-transform: none !important;
+		    -ms-transform: none !important;
+		        transform: none !important;
+	}
+	.reveal section img {
+		display: block;
+		margin: 15px 0px;
+		background: rgba(255,255,255,1);
+		border: 1px solid #666;
+		box-shadow: none;
+	}
+
+	.reveal section small {
+		font-size: 0.8em;
+	}
+
+}  
+</script>
+
+
+<script id="pdf-css" type="application/dynamic-css">
+    
+/**
+ * This stylesheet is used to print reveal.js
+ * presentations to PDF.
+ *
+ * https://github.com/hakimel/reveal.js#pdf-export
+ */
+
+* {
+	-webkit-print-color-adjust: exact;
+}
+
+body {
+	margin: 0 auto !important;
+	border: 0;
+	padding: 0;
+	float: none !important;
+	overflow: visible;
+}
+
+html {
+	width: 100%;
+	height: 100%;
+	overflow: visible;
+}
+
+/* Remove any elements not needed in print. */
+.nestedarrow,
+.reveal .controls,
+.reveal .progress,
+.reveal .playback,
+.reveal.overview,
+.fork-reveal,
+.share-reveal,
+.state-background {
+	display: none !important;
+}
+
+h1, h2, h3, h4, h5, h6 {
+	text-shadow: 0 0 0 #000 !important;
+}
+
+.reveal pre code {
+	overflow: hidden !important;
+	font-family: Courier, 'Courier New', monospace !important;
+}
+
+ul, ol, div, p {
+	visibility: visible;
+	position: static;
+	width: auto;
+	height: auto;
+	display: block;
+	overflow: visible;
+	margin: auto;
+}
+.reveal {
+	width: auto !important;
+	height: auto !important;
+	overflow: hidden !important;
+}
+.reveal .slides {
+	position: static;
+	width: 100%;
+	height: auto;
+
+	left: auto;
+	top: auto;
+	margin: 0 !important;
+	padding: 0 !important;
+
+	overflow: visible;
+	display: block;
+
+	-webkit-perspective: none;
+	   -moz-perspective: none;
+	    -ms-perspective: none;
+	        perspective: none;
+
+	-webkit-perspective-origin: 50% 50%; /* there isn't a none/auto value but 50-50 is the default */
+	   -moz-perspective-origin: 50% 50%;
+	    -ms-perspective-origin: 50% 50%;
+	        perspective-origin: 50% 50%;
+}
+
+.reveal .slides section {
+	page-break-after: always !important;
+
+	visibility: visible !important;
+	position: relative !important;
+	display: block !important;
+	position: relative !important;
+
+	margin: 0 !important;
+	padding: 0 !important;
+	box-sizing: border-box !important;
+	min-height: 1px;
+
+	opacity: 1 !important;
+
+	-webkit-transform-style: flat !important;
+	   -moz-transform-style: flat !important;
+	    -ms-transform-style: flat !important;
+	        transform-style: flat !important;
+
+	-webkit-transform: none !important;
+	   -moz-transform: none !important;
+	    -ms-transform: none !important;
+	        transform: none !important;
+}
+
+.reveal section.stack {
+	margin: 0 !important;
+	padding: 0 !important;
+	page-break-after: avoid !important;
+	height: auto !important;
+	min-height: auto !important;
+}
+
+.reveal img {
+	box-shadow: none;
+}
+
+.reveal .roll {
+	overflow: visible;
+	line-height: 1em;
+}
+
+/* Slide backgrounds are placed inside of their slide when exporting to PDF */
+.reveal section .slide-background {
+	display: block !important;
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	z-index: -1;
+}
+
+/* All elements should be above the slide-background */
+.reveal section>* {
+	position: relative;
+	z-index: 1;
+}
+
+/* Display slide speaker notes when 'showNotes' is enabled */
+.reveal .speaker-notes-pdf {
+	display: block;
+	width: 100%;
+	max-height: none;
+	left: auto;
+	top: auto;
+	z-index: 100;
+}
+
+/* Display slide numbers when 'slideNumber' is enabled */
+.reveal .slide-number-pdf {
+	display: block;
+	position: absolute;
+	font-size: 14px;
+}
+
+</script>
+
+
+<script>
+var style = document.createElement( 'style' );
+style.type = 'text/css';
+var style_script_id = window.location.search.match( /print-pdf/gi ) ? 'pdf-css' : 'paper-css';
+var style_script = document.getElementById(style_script_id).text;
+style.innerHTML = style_script;
+document.getElementsByTagName('head')[0].appendChild(style);
+</script>
+
+</head>
+<body>
+  <div class="reveal">
+    <div class="slides">
+
+<section>
+    <h1 class="title">Reproducibility in behavioral science</h1>
+    <h2 class="author">Rick O. Gilmore</h2>
+    <h3 class="date">8/22/2017</h3>
+</section>
+
+<section><section id="preliminaries" class="titleslide slide level1"><h1>Preliminaries</h1></section><section class="slide level2">
+
+<p><img src="https://upload.wikimedia.org/wikipedia/commons/8/87/NSF_Logo.PNG" height=250px> <img src="https://science.nichd.nih.gov/confluence/download/attachments/34472103/NICHD-vertical-2-color.png?version=1&modificationDate=1477410070000&api=v2" height=250px> </br> <img src="https://sloan.org/storage/app/media/Logos/Sloan-Logo-stacked-black-web.png" height-250px></p>
+<aside class="notes">
+<p>I thank NSF, NICHD, SRCD, and the Sloan Foundation for support.</p>
+</aside>
+</section><section id="overview" class="slide level2">
+<h1>Overview</h1>
+<ul>
+<li>The reproducibility “crisis”</li>
+<li>The crisis in psychology</li>
+<li>“Big data” behavioral science is computationally intensive</li>
+<li>Let’s not waste a “good” crisis</li>
+</ul>
+</section></section>
+<section><section id="the-reproducibility-crisis" class="titleslide slide level1"><h1>The reproducibility “crisis”</h1></section><section id="is-there-a-reproducibility-crisis" class="slide level2">
+<h1>Is there a reproducibility crisis?</h1>
+<ul>
+<li>Yes, a significant crisis</li>
+<li>Yes, a slight crisis</li>
+<li>No crisis</li>
+<li>Don’t know</li>
+</ul>
+</section><section class="slide level2">
+
+<div class="centered">
+<p><a href="http://www.nature.com/polopoly_fs/7.36716.1469695923!/image/reproducibility-graphic-online1.jpeg_gen/derivatives/landscape_630/reproducibility-graphic-online1.jpeg" height=450px> <img src="http://www.nature.com/polopoly_fs/7.36716.1469695923!/image/reproducibility-graphic-online1.jpeg_gen/derivatives/landscape_630/reproducibility-graphic-online1.jpeg" height=500px> </a> </br> <a href="http://doi.org/10.1038/533452a"><span class="citation" data-cites="Baker2016-rz">[@Baker2016-rz]</span></a></p>
+</div>
+<aside class="notes">
+<p>Nature conducted a survey of some 1,600 scientists in 2016. They were asked this question and a few others. Here are the results.</p>
+</aside>
+</section><section class="slide level2">
+
+<div class="centered">
+<a href="http://www.nature.com/polopoly_fs/7.36718.1464174471!/image/reproducibility-graphic-online3.jpg_gen/derivatives/landscape_630/reproducibility-graphic-online3.jpg"> <img src="http://www.nature.com/polopoly_fs/7.36718.1464174471!/image/reproducibility-graphic-online3.jpg_gen/derivatives/landscape_630/reproducibility-graphic-online3.jpg"" height=500px> </a> </br> <a href="http://doi.org/10.1038/533452a"><span class="citation" data-cites="Baker2016-rz">[@Baker2016-rz]</span></a>
+<aside class="notes">
+
+</aside>
+</section><section class="slide level2">
+
+<div class="centered">
+<p><a href="http://www.nature.com/polopoly_fs/7.36719.1464174488!/image/reproducibility-graphic-online4.jpg_gen/derivatives/landscape_630/reproducibility-graphic-online4.jpg"> <img src="http://www.nature.com/polopoly_fs/7.36719.1464174488!/image/reproducibility-graphic-online4.jpg_gen/derivatives/landscape_630/reproducibility-graphic-online4.jpg" height=500px> </a> </br> <a href="http://doi.org/10.1038/533452a"><span class="citation" data-cites="Baker2016-rz">[@Baker2016-rz]</span></a></p>
+</div>
+<aside class="notes">
+<p>Here are the data from the Nature survey.</p>
+</aside>
+</section><section id="a-new-lexicon-goodman2016-fi" class="slide level2">
+<h1>“A new lexicon” <a href="http://doi.org/10.1126/scitranslmed.aaf5027"><span class="citation" data-cites="Goodman2016-fi">[@Goodman2016-fi]</span></a></h1>
+<ul>
+<li><strong>Methods reproducibility</strong>
+<ul>
+<li>Enough details about materials &amp; methods recorded (&amp; reported)</li>
+<li>Same results with same materials &amp; methods</li>
+</ul></li>
+<li><strong>Results reproducibility</strong>
+<ul>
+<li>Same results from independent study</li>
+</ul></li>
+<li><strong>Inferential reproducibility</strong>
+<ul>
+<li>Same inferences from one or more studies or reanalyses</li>
+</ul></li>
+</ul>
+<p><a href="http://doi.org/10.1126/scitranslmed.aaf5027"><span class="citation" data-cites="Goodman2016-fi">[@Goodman2016-fi]</span></a></p>
+<aside class="notes">
+<p>Goodman et al. advocate a new lexicon for reproducibility where…</p>
+</aside>
+</section><section class="slide level2">
+
+<div class="centered">
+<p><img src="https://cdn.shopify.com/s/files/1/0877/5762/products/Rigor_Mortis_1024x1024.jpg?v=1491240110" height=500px/></p>
+</div>
+<aside class="notes">
+<p>Clearly, the significant or slight crisis in reproducibility extends across scientific domains. Indeed, the NPR science reporter Richard Harris in a book published earlier this year said that sloppy biomedical research creates worthless cures, crushes hope, costs billions.</p>
+</aside>
+</section></section>
+<section><section id="the-crisis-in-psychology" class="titleslide slide level1"><h1>The crisis in psychology</h1></section><section class="slide level2">
+
+<div class="centered">
+<p><img src="http://press.princeton.edu/images/k10970.gif" height=500px></p>
+</div>
+<aside class="notes">
+<p>But rather than cast aspersions on other fields, let me focus on my own field’s deadly sins, as cognitive neuroscientist Chris Chambers put it.</p>
+</aside>
+</section><section id="the-sin-of-unreliability" class="slide level2">
+<h1>The sin of unreliability</h1>
+<div class="centered">
+<p><img src="https://i.reddituploads.com/cfb6336d162f4b908cb6715d3da752b5?fit=max&h=1536&w=1536&s=cb3b9e51ea5fef6fdc229fb24b740b7d" height=500px></p>
+</div>
+</section><section id="studies-are-underpowered" class="slide level2">
+<h1>Studies are underpowered</h1>
+<div class="centered">
+<p><img src="http://journals.plos.org/plosbiology/article/file?id=10.1371/journal.pbio.2000797.g003&type=large" height=500px></p>
+<p><a href="10.1371/journal.pbio.2000797"><span class="citation" data-cites="Szucs2017-fc">[@Szucs2017-fc]</span></a></p>
+</div>
+<aside class="notes">
+<p>As Szucs and Ioannides have shown based on an analysis of more than 10,000 papers in the cognitive neuroscience literature, sample sizes are small, and the probability of false negatives is high, especially for small to medium effect sizes.</p>
+</aside>
+</section><section class="slide level2">
+
+<div class="centered">
+<blockquote>
+<p><em>“Assuming a realistic range of prior probabilities for null hypotheses, false report probability is likely to exceed 50% for the whole literature.”</em></p>
+</blockquote>
+</div>
+<div class="centered">
+<p>So, this means that we may not know what we think we know.</p>
+</div>
+</section><section id="the-sin-of-hoarding" class="slide level2">
+<h1>The sin of hoarding</h1>
+<ul>
+<li>Data &amp; materials sharing is <strong>not</strong> universal practice</li>
+<li>Even <strong>after</strong> a publication has gone to press</li>
+<li>Despite implicit agreement to do so if publishing in certain journals (e.g., American Psychological Association)</li>
+</ul>
+</section><section id="the-sin-of-corruptibility" class="slide level2">
+<h1>The sin of corruptibility</h1>
+<div class="centered">
+<p><a href="http://science.sciencemag.org/content/348/6239/1100.2"> <img src="img/lacour-green.jpg" height=450px/> </a></p>
+<p><a href="http://doi.org/10.1126/science.1256151"><span class="citation" data-cites="lacour_when_2014">[@lacour_when_2014]</span></a></p>
+</div>
+</section><section class="slide level2">
+
+<div class="centered">
+<p><a href="http://pubman.mpdl.mpg.de/pubman/item/escidoc:1569964:8/component/escidoc:1569966/Stapel_Investigation_Final_report.pdf"> <img src="img/flawed-science-stapel.jpg" height=500px> </a></p>
+</div>
+</section><section class="slide level2">
+
+<ul>
+<li>Stapel was Dean of the School of Social and Behavioral Sciences at Tilburg University, teacher of Scientific Ethics course</li>
+<li>Fraud investigation launched when 3 grad students noticed anomalies – duplicate entries in data tables</li>
+<li>Stapel confessed, lost position, gave up Ph.D., wrote a book</li>
+</ul>
+</section><section id="the-sin-of-bias" class="slide level2">
+<h1>The sin of bias…</h1>
+<blockquote>
+<p>*“This article reports 9 experiments, involving more than 1,000 participants, that test for retroactive influence by”time-reversing&quot; well-established psychological effects so that the individual’s responses are obtained before the putatively causal stimulus events occur.“*</p>
+</blockquote>
+<p><a href="10.1037/a0021524"><span class="citation" data-cites="Bem2011-kl">[@Bem2011-kl]</span></a></p>
+<aside class="notes">
+<p>And this 2011 paper by Daryl Bem from Cornell purporting to show evidence for Extrasensory Perception or precognition. Psychology is harder than physics, but it doesn’t supercede it. This paper as blogger Tal Yarkoni <a href="http://www.talyarkoni.org/blog/2011/01/10/the-psychology-of-parapsychology-or-why-good-researchers-publishing-good-articles-in-good-journals-can-still-get-it-totally-wrong/">notes</a> shows the perils of using standard, but flawed research practices.</p>
+</aside>
+</section><section class="slide level2">
+
+<blockquote>
+<p><em>“We argue that in order to convince a skeptical audience of a controversial claim, one needs to conduct strictly confirmatory studies and analyze the results with statistical tests that are conservative rather than liberal. We conclude that Bem’s p values do not indicate evidence in favor of precognition; instead, they indicate that experimental psychologists need to change the way they conduct their experiments and analyze their data.”</em></p>
+</blockquote>
+<p><a href="http://doi.org/10.1037/a0022790"><span class="citation" data-cites="Wagenmakers2011-yh">[@Wagenmakers2011-yh]</span></a></p>
+</section><section id="current-system-of-science-communication-reinforces-problems" class="slide level2">
+<h1>Current system of science communication reinforces problems</h1>
+<ul>
+<li>Values # of papers, “novel”/surprising results</li>
+<li>Replication denigrated; file drawer problem</li>
+<li>Data, code, materials sharing rare</li>
+<li>Studies underpowered</li>
+<li>Copy &amp; paste errors in reporting stats</li>
+</ul>
+</section><section id="cultural-change-is-hard" class="slide level2">
+<h1>Cultural change is hard</h1>
+<ul>
+<li>“It’s a witch-hunt.”</li>
+<li>“Trust me.”</li>
+<li>“It’s just self-hating social psychologists.”</li>
+<li>“Data sharing won’t help me personally”</li>
+</ul>
+</section><section id="psychology-harder-than-physics" class="slide level2">
+<h1>Psychology harder than physics</h1>
+</section><section id="embedded-in-systems" class="slide level2">
+<h1>Embedded in systems</h1>
+<ul>
+<li>Small effects common</li>
+</ul>
+</section><section id="behavior-has-multiple-nested-dimensions" class="slide level2">
+<h1>Behavior has multiple, nested dimensions</h1>
+<div class="centered">
+<video width="600" height="400" controls>
+<source src="https://nyu.databrary.org/slot/11652/307774,376273/asset/47075/download?inline=true" type="video/mp4"> Your browser does not support the video tag.
+</video>
+</div>
+<p><small>Adolph, K., Tamis-LeMonda, C. &amp; Gilmore, R.O. (2016). PLAY Project: Webinar discussions on protocol and coding. Databrary. Retrieved February 17, 2017 from <a href="https://nyu.databrary.org/volume/232" class="uri">https://nyu.databrary.org/volume/232</a> </small></p>
+</section><section id="data-are-sensitive-harder-to-share" class="slide level2">
+<h1>Data are sensitive, hard(er) to share</h1>
+<ul>
+<li>Protect participant’s identities</li>
+<li>Protect from harm/embarrassment</li>
+</ul>
+</section><section id="sampling-is-biased" class="slide level2">
+<h1>Sampling is biased</h1>
+<ul>
+<li>Much (lab-based) data collected are from <strong>W</strong>estern, <strong>E</strong>ducated <strong>I</strong>ndustrialized, <strong>R</strong>ich, <strong>D</strong>emocratic (WEIRD) populations <a href="http://doi.org/10.1017/S0140525X0999152X"><span class="citation" data-cites="henrich_weirdest_2010">[@henrich_weirdest_2010]</span></a></li>
+</ul>
+</section></section>
+<section><section id="computation-in-psychological-science" class="titleslide slide level1"><h1>Computation in psychological science</h1></section><section id="big-data-in-behavioral-science" class="slide level2">
+<h1>“Big” data in behavioral science</h1>
+</section><section id="a-personal-example" class="slide level2">
+<h1>A personal example</h1>
+<ul>
+<li>How does vision develop?</li>
+<li><em>Experience</em>
+<ul>
+<li>Input +</li>
+<li>Visually-guided action</li>
+</ul></li>
+<li><ul>
+<li><em>Physical</em> (eye/brain/body) development</li>
+</ul></li>
+</ul>
+</section><section id="measure-in-the-lab" class="slide level2">
+<h1>Measure (in the lab)</h1>
+<ul>
+<li>Behavioral sensitivity</li>
+<li>Brain responses</li>
+<li>At different ages</li>
+</ul>
+</section><section class="slide level2">
+
+<div class="centered">
+<video width="750" height="450" controls>
+<source src="https://nyu.databrary.org/slot/9825/-/asset/11645/download?inline=true" type="video/mp4"> Your browser does not support the video tag.
+</video>
+<p></br> <a href="https://nyu.databrary.org/volume/75/slot/9825/-" class="uri">https://nyu.databrary.org/volume/75/slot/9825/-</a></p>
+<aside class="notes">
+<p>Using computer-generated displays like this.</p>
+</aside>
+</section><section id="childrens-behavior" class="slide level2 smaller">
+<h1>Children’s behavior</h1>
+<div class="centered">
+<p><img src="https://raw.githubusercontent.com/gilmore-lab/moco-3-pattern-psychophysics/master/child-laminar-radial/img/child/p.corr.plot-1.png" height=500px></p>
+</div>
+</section><section id="adults-behavior" class="slide level2 smaller">
+<h1>Adults’ behavior</h1>
+<div class="centered">
+<p><img src="https://raw.githubusercontent.com/gilmore-lab/moco-3-pattern-psychophysics/master/child-laminar-radial/img/adult/p.corr.plot-1.png" height=500px></p>
+<p><a href="http://doi.org/10.1167/15.12.1008"><span class="citation" data-cites="adamiak_adult_2015">[@adamiak_adult_2015]</span></a></p>
+</div>
+</section><section id="childrens-brain-responses" class="slide level2 smaller">
+<h1>Children’s brain responses</h1>
+<div class="centered">
+<p><img src="https://raw.githubusercontent.com/gilmore-lab/gilmore-thomas-fesi-2015/master/figs/1F1/child/figX-channel-wise-effects-1.png" width="800px"></p>
+</div>
+</section><section id="adults-brain-responses" class="slide level2">
+<h1>Adults’ brain responses</h1>
+<div class="centered">
+<p><img src="https://raw.githubusercontent.com/gilmore-lab/gilmore-thomas-fesi-2015/master/figs/1F1/adult/figX-channel-wise-effects-1.png" width="800px"></p>
+</div>
+</section><section id="but-whats-the-input-the-real-input" class="slide level2">
+<h1>But, what’s the input? The <em>real</em> input?</h1>
+</section><section class="slide level2">
+
+<div class="centered">
+<video width="750" height="450" controls>
+<source src="https://nyu.databrary.org/slot/7740/0,24634/asset/16751/download?inline=true" type="video/mp4"> Your browser does not support the video tag.
+</video>
+<aside class="notes">
+<p>What if I had first-person, observer’s-eye views of what infants saw…</p>
+</aside>
+</section><section class="slide level2">
+
+<div class="centered">
+<video width="750" height="450" controls>
+<source src="https://nyu.databrary.org/slot/7740/0,24200/asset/16753/download?inline=true" type="video/mp4"> Your browser does not support the video tag.
+</video>
+<aside class="notes">
+<p>And what mothers’ saw while they moved together through the very same environment?</p>
+</aside>
+</section><section class="slide level2">
+
+<div class="centered">
+<p><img src="https://raw.githubusercontent.com/gilmore-lab/temple-2017-02-27/master/img/mom-baby-carrier.jpg" height=350px></p>
+</div>
+<p>Adolph, K. (2015). Active vision in passive locomotion: real-world free viewing in infants and adults. Databrary. Retrieved February 18, 2017 from <a href="http://doi.org/10.17910/B7.123" class="uri">http://doi.org/10.17910/B7.123</a></p>
+</section><section id="frame-by-frame-video-analysis" class="slide level2">
+<h1>Frame-by-frame video analysis</h1>
+<div class="centered">
+<video width="640" height="480" controls>
+<source src="https://nyu.databrary.org/slot/11680/0,24500/asset/41871/download?inline=true" type="video/mp4"> Your browser does not support the video tag.
+</video>
+</div>
+<aside class="notes">
+
+</aside>
+</section><section class="slide level2">
+
+<div class="centered">
+<video width="640" height="480" controls>
+<source src="https://nyu.databrary.org/slot/11680/25500,50000/asset/41873/download?inline=true" type="video/mp4"> Your browser does not support the video tag.
+</video>
+</div>
+</section><section class="slide level2">
+
+<div class="centered">
+<video width="640" height="480" controls>
+<source src="https://nyu.databrary.org/slot/11680/51000,75500/asset/41875/download?inline=true" type="video/mp4"> Your browser does not support the video tag.
+</video>
+</div>
+</section><section id="findings" class="slide level2 smaller">
+<h1>Findings</h1>
+<div class="centered">
+<p><img src="https://raw.githubusercontent.com/gilmore-lab/temple-2017-02-27/master/img/optic-flow-locomotion.jpg" height=500px></p>
+<p><a href="http://doi.org/10.1162/NECO_a_00645"><span class="citation" data-cites="raudies_visual_2014">[@raudies_visual_2014]</span></a></p>
+</div>
+</section><section id="findings-1" class="slide level2">
+<h1>Findings</h1>
+<ul>
+<li>Infant (passengers) experience faster visual speeds than mother</li>
+<li>Controlling for speed of locomotion, environment</li>
+<li>Motion “priors” for infants ≠ mothers</li>
+</ul>
+</section><section id="are-fast-flow-speeds-common" class="slide level2">
+<h1>Are “fast” flow speeds common?</h1>
+<div class="centered">
+<video width="532" height="400" controls>
+<source src="https://nyu.databrary.org/slot/11630/1567557,1747248/asset/39854/download?inline=true" type="video/mp4"> Your browser does not support the video tag.
+</video>
+<p>Jayaraman, S., Smith, L.B., Raudies, F. &amp; Gilmore, R.O. (2014). Natural Scene Statistics of Visual Experience Across Development and Culture. Databrary. Retrieved February 18, 2017 from <a href="http://doi.org/10.17910/B7988V" class="uri">http://doi.org/10.17910/B7988V</a></p>
+<p><a href="10.1109/DEVLRN.2015.7345450"><span class="citation" data-cites="gilmore_what_2015">[@gilmore_what_2015]</span></a></p>
+</section><section class="slide level2">
+
+<div class="centered">
+<p><img src="https://raw.githubusercontent.com/gilmore-lab/temple-2017-02-27/master/img/bloomington.jpg" width=400px> <img src="https://raw.githubusercontent.com/gilmore-lab/temple-2017-02-27/master/img/chennai.jpg" width=400px></p>
+</div>
+</section><section class="slide level2">
+
+<div class="centered">
+<table>
+<thead>
+<tr class="header">
+<th>Country</th>
+<th>Females</th>
+<th>Males</th>
+<th>Age (wks)</th>
+<th>Coded video Hrs</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>India</td>
+<td>17</td>
+<td>13</td>
+<td>3-63</td>
+<td>3.1 (0.5-6.0)</td>
+</tr>
+<tr class="even">
+<td>U.S.</td>
+<td>15</td>
+<td>19</td>
+<td>4-62</td>
+<td>4.6 (0.2-7.6)</td>
+</tr>
+</tbody>
+</table>
+<p></br> </br> <a href="10.1109/DEVLRN.2015.7345450"><span class="citation" data-cites="gilmore_what_2015">[@gilmore_what_2015]</span></a></p>
+</div>
+</section><section id="motion-speeds---6-weeks" class="slide level2 flexbox vcenter smaller">
+<h1>Motion speeds - 6 weeks</h1>
+<div class="centered">
+<p>U.S. | India</br> <img src='https://raw.githubusercontent.com/gilmore-lab/temple-2017-02-27/master/img/006AP.png' width=400px> <img src='https://raw.githubusercontent.com/gilmore-lab/temple-2017-02-27/master/img/006MO.png' width=400px></p>
+<p><a href="10.1109/DEVLRN.2015.7345450"><span class="citation" data-cites="gilmore_what_2015">[@gilmore_what_2015]</span></a></p>
+</div>
+</section><section id="motion-speeds-34-weeks" class="slide level2 flexbox vcenter smaller">
+<h1>Motion speeds – 34 weeks</h1>
+<div class="centered">
+<p>U.S. | India</br><img src='https://raw.githubusercontent.com/gilmore-lab/temple-2017-02-27/master/img/034JC.png' width=400px> <img src='https://raw.githubusercontent.com/gilmore-lab/temple-2017-02-27/master/img/034NW.png' width=400px></p>
+<p><a href="10.1109/DEVLRN.2015.7345450"><span class="citation" data-cites="gilmore_what_2015">[@gilmore_what_2015]</span></a></p>
+</div>
+</section><section id="motion-speeds-58-weeks" class="slide level2 flexbox vcenter smaller">
+<h1>Motion speeds – 58 weeks</h1>
+<div class="centered">
+<p>U.S. | India</br><img src='https://raw.githubusercontent.com/gilmore-lab/temple-2017-02-27/master/img/057AP.png' width=400px/> <img src='https://raw.githubusercontent.com/gilmore-lab/temple-2017-02-27/master/img/058LA.png' width=400px/></p>
+<p><a href="10.1109/DEVLRN.2015.7345450"><span class="citation" data-cites="gilmore_what_2015">[@gilmore_what_2015]</span></a></p>
+</div>
+</section><section id="linear-radial-patterns" class="slide level2 smaller">
+<h1>Linear &gt; radial patterns</h1>
+<div class="centered">
+<p><img src='https://raw.githubusercontent.com/gilmore-lab/temple-2017-02-27/master/img/pattern-correlations.jpg' height=450px/></p>
+<p><a href="10.1109/DEVLRN.2015.7345450"><span class="citation" data-cites="gilmore_what_2015">[@gilmore_what_2015]</span></a></p>
+</div>
+</section><section id="simulating-developmental-change" class="slide level2 flexbox vcenter smaller">
+<h1>Simulating developmental change</h1>
+<div class="centered">
+<p><span class="math inline">\(\begin{pmatrix}\dot{x} \\ \dot{y}\end{pmatrix}=\frac{1}{z} \begin{pmatrix}-f &amp; 0 &amp; x\\ 0 &amp; -f &amp; y \end{pmatrix} \begin{pmatrix}{v_x{}}\\ {v_y{}} \\{v_z{}}\end{pmatrix}+ \frac{1}{f} \begin{pmatrix} xy &amp; -(f^2+x^2) &amp; fy\\ f^2+y^2 &amp; -xy &amp; -fy \end{pmatrix} \begin{pmatrix} \omega_{x}\\ \omega_{y}\\ \omega_{z} \end{pmatrix}\)</span></p>
+<p><strong>Geometry of environment/observer</strong>: <span class="math inline">\((x, y, z)\)</span></br> <strong>Translational speed</strong>: <span class="math inline">\((v_x, v_y, v_z)\)</span></br> <strong>Rotational speed</strong>: <span class="math inline">\((\omega_{x}, \omega_{y}, \omega{z})\)</span></br> <strong>Retinal flow</strong>: <span class="math inline">\((\dot{x}, \dot{y})\)</span></p>
+</div>
+</section><section id="parameters-for-simulation" class="slide level2">
+<h1>Parameters For Simulation</h1>
+<table>
+<thead>
+<tr class="header">
+<th>Parameter</th>
+<th>Crawling Infant</th>
+<th>Walking Infant</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Eye height</td>
+<td>0.30 m</td>
+<td>0.60 m</td>
+</tr>
+<tr class="even">
+<td>Locomotor speed</td>
+<td>0.33 m/s</td>
+<td>0.61 m/s</td>
+</tr>
+<tr class="odd">
+<td>Head tilt</td>
+<td>20 deg</td>
+<td>9 deg</td>
+</tr>
+</tbody>
+</table>
+<div class="centered">
+<p></br> <img src="https://raw.githubusercontent.com/gilmore-lab/temple-2017-02-27/master/img/kretch-etal.png" width=600px/> </br> <a href="http://dx.doi.org/10.1111/cdev.12206"><span class="citation" data-cites="kretch_crawling_2014">[@kretch_crawling_2014]</span></a></p>
+</div>
+</section><section id="parameters-for-simulation-1" class="slide level2">
+<h1>Parameters for Simulation</h1>
+<table>
+<thead>
+<tr class="header">
+<th>Geometric Feature</th>
+<th>Distance</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Side wall</td>
+<td>+/- 2 m</td>
+</tr>
+<tr class="even">
+<td>Side wall height</td>
+<td>2.5 m</td>
+</tr>
+<tr class="odd">
+<td>Distance of ground plane</td>
+<td>32 m</td>
+</tr>
+<tr class="even">
+<td>Field of view width</td>
+<td>60 deg</td>
+</tr>
+<tr class="odd">
+<td>Field of view height</td>
+<td>45 deg</td>
+</tr>
+</tbody>
+</table>
+</section><section id="simulating-flow-fields" class="slide level2 flexbox vcenter smaller">
+<h1>Simulating Flow Fields</h1>
+<div class="centered">
+<p><img src='https://raw.githubusercontent.com/gilmore-lab/temple-2017-02-27/master/img/simulation-flow-patterns.png' width=800px/></p>
+<p><a href="http://doi.org/10.1109/DEVLRN.2015.7345450"><span class="citation" data-cites="gilmore_what_2015">[@gilmore_what_2015]</span></a></p>
+</div>
+</section><section id="flow-direction-distributions-by-geometry-posture" class="slide level2 smaller">
+<h1>Flow Direction Distributions by Geometry &amp; Posture</h1>
+<div class="centered">
+<p><img src='https://raw.githubusercontent.com/gilmore-lab/temple-2017-02-27/master/img/simulation-flow-direction-hist.png' width=600px/></p>
+<p><a href="http://doi.org/10.1109/DEVLRN.2015.7345450"><span class="citation" data-cites="gilmore_what_2015">[@gilmore_what_2015]</span></a></p>
+</div>
+</section><section id="simulated-flow-speeds-ms" class="slide level2 flexbox vcenter">
+<h1>Simulated Flow Speeds (m/s)</h1>
+<div class="centered">
+<table>
+<thead>
+<tr class="header">
+<th>Type of Locomotion</th>
+<th>Ground Plane</th>
+<th>Room</th>
+<th>Side Wall</th>
+<th>Two Walls</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Crawling</td>
+<td>14.41</td>
+<td>14.42</td>
+<td>14.43</td>
+<td>14.62</td>
+</tr>
+<tr class="even">
+<td>Walking</td>
+<td>9.38</td>
+<td>8.56</td>
+<td>7.39</td>
+<td>9.18</td>
+</tr>
+</tbody>
+</table>
+</div>
+</section><section id="essentials-for-computationally-intensive-psychological-research" class="slide level2">
+<h1>Essentials for computationally intensive psychological research</h1>
+<ul>
+<li>Computational resources</li>
+<li>Technical expertise</li>
+<li>Data sharing</li>
+</ul>
+</section><section class="slide level2">
+
+<iframe src="http://databrary.org" height="550px" width="800px">
+</iframe>
+</section><section id="what-ive-learned" class="slide level2">
+<h1>What I’ve learned</h1>
+<ul>
+<li>Many barriers to open science</li>
+<li>Technology + culture</li>
+<li>Carrots, sticks are fine</li>
+<li><em>Ice cream</em> is better
+<ul>
+<li>learning more, faster, making science better</li>
+</ul></li>
+</ul>
+<!-- ## Play & Learning Across a Year (PLAY) -->
+<!-- - $n=900$ families from 30 sites across the U.S. -->
+<!-- - Record "an hour in the life" of mothers & infants at 12-, 18-, & 24 months-of-age -->
+<!-- - Human-applied *transcripts* and time-locked codes for *language*, *emotional expression*, *object interaction*, and *locomotion* -->
+<!-- --- -->
+<!-- - Family structure, health, ambient sound levels, room-by-room dimensions -->
+<!-- - Stored and shared (at project's end) on Databrary **with permission** from participant families **for researchers** -->
+</section></section>
+<section><section id="lets-not-waste-a-good-crisis" class="titleslide slide level1"><h1>Let’s not waste a “good” crisis</h1></section><section class="slide level2">
+
+<div class="centered">
+<p><a href="http://www.nature.com/articles/s41562-016-0021/figures/1"> <img src="http://www.nature.com/article-assets/npg/nathumbehav/2017/s41562-016-0021/images_hires/w926/s41562-016-0021-f1.jpg" height=500px> </a></p>
+<p><a href="http://doi.org/10.1038/s41562-016-0021"><span class="citation" data-cites="Munafo2017-dc">[@Munafo2017-dc]</span></a></p>
+</div>
+<aside class="notes">
+<p>This recent manifesto from Nature Human Behavior describes the risks to reproducible science at every step of the process. I urge you to read it.</p>
+</aside>
+</section><section id="collect-share-video-as-data-and-documentation" class="slide level2">
+<h1>Collect &amp; share video as data and documentation</h1>
+<!-- Add Gilmore & Adolph image -->
+<div class="centered">
+<p><img src="" height=500px></p>
+</div>
+<aside class="notes">
+<p>Karen Adolph at NYU is my partner in founding and directing the Databrary project. We have argued that video plays a central role in improving reproducibility in behavioural science. It has uniquely powerful abilities to capture who said or did what when and in what context.</p>
+</aside>
+</section><section id="increase-sample-sizes" class="slide level2">
+<h1>Increase sample sizes</h1>
+<ul>
+<li>Collect larger samples</li>
+<li>Standardize metadata about participants, settings, measures &amp; tasks to accelerate meta- and mega-analyses</li>
+</ul>
+</section><section id="support-data-repositories" class="slide level2">
+<h1>Support data repositories</h1>
+<ul>
+<li>Funder, journal mandates for sharing increasing</li>
+<li>But no long-term, stable, funding sources for curation, archiving, sharing</li>
+</ul>
+</section><section id="build-platforms-for-discovery" class="slide level2">
+<h1>Build platforms for discovery</h1>
+<ul>
+<li>Data + analysis</li>
+<li>e.g., BioSTAR</li>
+</ul>
+</section><section class="slide level2">
+
+<div class="centered">
+<p><img src="https://upload.wikimedia.org/wikipedia/commons/3/3f/HST-SM4.jpeg" height=450px></p>
+</div>
+</section><section class="slide level2">
+
+<div class="centered">
+<p><a href="https://en.wikipedia.org/wiki/Hubble_Ultra-Deep_Field"> <img src="https://upload.wikimedia.org/wikipedia/commons/6/69/NASA-HS201427a-HubbleUltraDeepField2014-20140603.jpg" height=500px> </a></p>
+</div>
+<aside class="notes">
+<p>The Hubble Ultra Deep Field. Taken over 3.5 months in 2003-04. Contains an estimated 10,000 galaxies, and because time and space collapse at astronomical distances, looks back ~13 billion years, or 400-800 years before the big bang.</p>
+</aside>
+</section><section class="slide level2">
+
+<!-- <div class="centered"> -->
+<!-- <img src="https://media.licdn.com/mpr/mpr/shrinknp_800_800/AAEAAQAAAAAAAAW9AAAAJDRhMTc5OGYyLWE4MzItNDNlOS1hMDJjLTllOGU2ZTNiNmMzNg.jpg" height=450px> -->
+<!-- </div> -->
+<!-- <div class="notes"> -->
+<!-- In closing, I'd like us to step outside of our narrow disciplinary silos. -->
+<!-- </div> -->
+<!-- --- -->
+<!-- <div class="centered"> -->
+<!-- <img src="http://cdn2.hubspot.net/hub/134568/file-1208368053-jpg/6-blind-men-hans.jpg" height=450px> -->
+<!-- </div> -->
+<!-- <div class="notes"> -->
+<!-- To make the future of big data behavioral science one where we're not just blind men studying our small part of the elephant. -->
+<!-- </div> -->
+<!-- --- -->
+<!-- <div class="centered"> -->
+<!-- <img src="http://static.neatorama.com/images/2012-09/girl-hugging-elephant.jpg" height=450px> -->
+<!-- </div> -->
+<!-- <div class="notes"> -->
+<!-- But where we take off our opaque glasses and embrace the whole glorious animal. -->
+<!-- </div> -->
+<!-- # Thank you! -->
+<!-- --- -->
+<!-- <div="centered"> -->
+<!-- [@rogilmore](http://twitter.com)</br> -->
+<!-- rogilmore@psu.edu</br> -->
+<!-- [gilmore-lab.github.io](http://gilmore-lab.github.io) -->
+<!-- </div> -->
+<!-- ## Stack -->
+<!-- This talk was produced on 2017-08-22 in [RStudio Server Pro](http://rstudio.com) using R Markdown and the reveal.JS framework. -->
+<!-- The code and materials used to generate the slides may be found at <https://github.com/gilmore-lab/aci-ics-2017-09-07/>. -->
+<!-- Information about the R Session that produced the code is as follows: -->
+<!-- ```{r session-info} -->
+<!-- sessionInfo() -->
+<!-- ``` -->
+</section></section>
+    </div>
+  </div>
+
+  <script src="libs/reveal.js-3.3.0.1/lib/js/head.min.js"></script>
+  <script src="libs/reveal.js-3.3.0.1/js/reveal.js"></script>
+
+  <script>
+
+      // Full list of configuration options available at:
+      // https://github.com/hakimel/reveal.js#configuration
+      Reveal.initialize({
+        // Display the page number of the current slide
+        slideNumber: true,
+        // Push each slide change to the browser history
+        history: true,
+        // Vertical centering of slides
+        center: false,
+        // Opens links in an iframe preview overlay
+        previewLinks: false,
+        // Transition style
+        transition: 'default', // none/fade/slide/convex/concave/zoom
+        // Transition style for full page slide backgrounds
+        backgroundTransition: 'default', // none/fade/slide/convex/concave/zoom
+
+
+
+        // Optional reveal.js plugins
+        dependencies: [
+          { src: 'libs/reveal.js-3.3.0.1/plugin/notes/notes.js', async: true },
+          { src: 'libs/reveal.js-3.3.0.1/plugin/zoom-js/zoom.js', async: true },
+        ]
+      });
+    </script>
+  <!-- dynamically load mathjax for compatibility with self-contained -->
+  <script>
+    (function () {
+      var script = document.createElement("script");
+      script.type = "text/javascript";
+      script.src  = "https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML";
+      document.getElementsByTagName("head")[0].appendChild(script);
+    })();
+  </script>
+
+<script>
+  (function() {
+    if (window.jQuery) {
+      Reveal.addEventListener( 'slidechanged', function(event) {  
+        window.jQuery(event.previousSlide).trigger('hidden');
+        window.jQuery(event.currentSlide).trigger('shown');
+      });
+    }
+  })();
+</script>
+
+
+  </body>
+</html>
