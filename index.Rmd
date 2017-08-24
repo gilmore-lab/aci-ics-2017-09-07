@@ -7,13 +7,14 @@ output:
     self_contained: false
     lib_dir: libs
     incremental: false
-    theme: default
-    transition: default
+    theme: simple
+    transition: none
     reveal_plugins: ["notes", "zoom"]
     reveal_options:
       slideNumber: true
       previewLinks: false
       center: false
+      touch: true
   ioslides_presentation:
     widescreen: true
 ---
@@ -57,9 +58,7 @@ I thank NSF, NICHD, SRCD, and the Sloan Foundation for support.
 ---
 
 <div class="centered">
-<a href="http://www.nature.com/polopoly_fs/7.36716.1469695923!/image/reproducibility-graphic-online1.jpeg_gen/derivatives/landscape_630/reproducibility-graphic-online1.jpeg" height=450px>
-<img src="http://www.nature.com/polopoly_fs/7.36716.1469695923!/image/reproducibility-graphic-online1.jpeg_gen/derivatives/landscape_630/reproducibility-graphic-online1.jpeg" height=500px>
-</a>
+<img src="http://www.nature.com/polopoly_fs/7.36716.1469695923!/image/reproducibility-graphic-online1.jpeg_gen/derivatives/landscape_630/reproducibility-graphic-online1.jpeg" height=550px>
 </br>
 <small>
 ([Baker, 2016](http://doi.org/10.1038/533452a))
@@ -73,9 +72,7 @@ Nature conducted a survey of some 1,600 scientists in 2016. They were asked this
 ---
 
 <div class="centered">
-<a href="http://www.nature.com/polopoly_fs/7.36718.1464174471!/image/reproducibility-graphic-online3.jpg_gen/derivatives/landscape_630/reproducibility-graphic-online3.jpg">
-<img src="http://www.nature.com/polopoly_fs/7.36718.1464174471!/image/reproducibility-graphic-online3.jpg_gen/derivatives/landscape_630/reproducibility-graphic-online3.jpg"" height=500px>
-</a>
+<img src="http://www.nature.com/polopoly_fs/7.36718.1464174471!/image/reproducibility-graphic-online3.jpg_gen/derivatives/landscape_630/reproducibility-graphic-online3.jpg"" height=550px>
 </br>
 <small>([Baker, 2016](http://doi.org/10.1038/533452a))</small>
 </div>
@@ -86,18 +83,15 @@ Nature conducted a survey of some 1,600 scientists in 2016. They were asked this
 ---
 
 <div class="centered">
-<a href="http://www.nature.com/polopoly_fs/7.36719.1464174488!/image/reproducibility-graphic-online4.jpg_gen/derivatives/landscape_630/reproducibility-graphic-online4.jpg">
-<img src="http://www.nature.com/polopoly_fs/7.36719.1464174488!/image/reproducibility-graphic-online4.jpg_gen/derivatives/landscape_630/reproducibility-graphic-online4.jpg" height=500px>
-</a>
-</br>
-<small>([Baker, 2016](http://doi.org/10.1038/533452a))</small>
+<img src="https://cdn.shopify.com/s/files/1/0877/5762/products/Rigor_Mortis_1024x1024.jpg?v=1491240110" height=550px/>
 </div>
 
 <div class="notes">
-Here are the data from the Nature survey.
+Clearly, the significant or slight crisis in reproducibility extends across scientific domains. Indeed, the NPR science reporter Richard Harris in a book published earlier this year said that sloppy biomedical research creates worthless cures, crushes hope, costs billions.
 </div>
 
-## "A new lexicon" 
+
+## What does "reproducibility" mean?
 
 - **Methods reproducibility**
     - Enough details about materials & methods recorded (& reported)
@@ -116,12 +110,19 @@ Goodman et al. advocate a new lexicon for reproducibility where...
 ---
 
 <div class="centered">
-<img src="https://cdn.shopify.com/s/files/1/0877/5762/products/Rigor_Mortis_1024x1024.jpg?v=1491240110" height=500px/>
+<img src="http://www.nature.com/polopoly_fs/7.36719.1464174488!/image/reproducibility-graphic-online4.jpg_gen/derivatives/landscape_630/reproducibility-graphic-online4.jpg" height=550px>
+</br>
+<small>([Baker, 2016](http://doi.org/10.1038/533452a))</small>
 </div>
 
 <div class="notes">
-Clearly, the significant or slight crisis in reproducibility extends across scientific domains. Indeed, the NPR science reporter Richard Harris in a book published earlier this year said that sloppy biomedical research creates worthless cures, crushes hope, costs billions.
+These definitions help put some of the presumed causes into perspective.
 </div>
+
+## Reproducibility crisis
+
+- "Hard" sciences, too
+- Data collection to statistical analysis to reporting to publishing
 
 # The crisis in psychology
 
@@ -156,7 +157,7 @@ As Szucs and Ioannides have shown based on an analysis of more than 10,000 paper
 ---
 
 <div class="centered">
-> *"Assuming a realistic range of prior probabilities for null hypotheses, false report probability is likely to exceed 50% for the whole literature."*
+> "Assuming a realistic range of prior probabilities for null hypotheses, false report probability is likely to exceed 50% for the whole literature."
 
 <small>([Szucs & Ioannides, 2017](http://doi.org/10.1371/journal.pbio.2000797))</small>
 </div>
@@ -165,7 +166,7 @@ As Szucs and Ioannides have shown based on an analysis of more than 10,000 paper
 So, this means that we may not know what we think we know.
 </div>
 
-## The sin of hoarding
+## The sin of hoarding...
 
 <div class="centered">
 <img src="https://raw.githubusercontent.com/gilmore-lab/psu-data-repro-bootcamp-2017-07-10/master/img/wicherts_2006_amp_61_7_726_fig1a.jpg" height=500px>
@@ -173,7 +174,7 @@ So, this means that we may not know what we think we know.
 <small>([Wicherts et al., 2006](http://doi.org/10.1037/0003-066X.61.7.726))</small>
 </div>
 
-## The sin of corruptibility
+## The sin of corruptibility...
 
 <div class="centered">
 <a href="http://science.sciencemag.org/content/348/6239/1100.2">
@@ -216,7 +217,7 @@ So, this means that we may not know what we think we know.
 
 Bem, D.J. (2011). Experimental evidence for anomalous retroactive influences on cognition and affect. *Journal of Personality and Social Psychology*, *100*(3), 407-425.
 
-> *"This article reports 9 experiments, involving more than 1,000 participants, that test for retroactive influence by "time-reversing" well-established psychological effects so that the individual's responses are obtained before the putatively causal stimulus events occur."*
+> "This article reports 9 experiments, involving more than 1,000 participants, that test for retroactive influence by "time-reversing" well-established psychological effects so that the individual's responses are obtained before the putatively causal stimulus events occur."
 
 <div class="notes">
 And this 2011 paper by Daryl Bem from Cornell purporting to show evidence for Extrasensory Perception or precognition. Psychology is harder than physics, but it doesn't supercede it. This paper as blogger Tal Yarkoni [notes](http://www.talyarkoni.org/blog/2011/01/10/the-psychology-of-parapsychology-or-why-good-researchers-publishing-good-articles-in-good-journals-can-still-get-it-totally-wrong/) shows the perils of using standard, but flawed research practices.
@@ -224,23 +225,43 @@ And this 2011 paper by Daryl Bem from Cornell purporting to show evidence for Ex
 
 ---
 
-> *"We argue that in order to convince a skeptical audience of a controversial claim, one needs to conduct strictly confirmatory studies and analyze the results with statistical tests that are conservative rather than liberal. We conclude that Bem's p values do not indicate evidence in favor of precognition; instead, they indicate that experimental psychologists need to change the way they conduct their experiments and analyze their data."*
+<div class="centered">
+<img src="https://vignette2.wikia.nocookie.net/minority-report/images/f/f0/Wally_and_the_Precogs.jpeg/revision/latest?cb=20170804220557" height=550>
+</div>
+
+<div class="notes">
+Yes, Bem was arguing for some sort of "Minority Report"-like evidence for precognition or ESP.
+</div>
+---
+
+> "We argue that in order to convince a skeptical audience of a controversial claim, one needs to conduct strictly confirmatory studies and analyze the results with statistical tests that are conservative rather than liberal. We conclude that Bem's *p* values do not indicate evidence in favor of precognition; instead, they indicate that experimental psychologists need to change the way they conduct their experiments and analyze their data."
 
 <small>([Wagenmakers et al., 2011](http://doi.org/10.1037/a0022790))</small>
 
-## Statistical reporting errors
+<div class="notes">
+But a careful, post-publication re-evaluation showed that Bem had made a number of small, defensible given current practices, errors that accumulated across his paper. None of them were picked up in review.
+</div>
+
+## Statistical errors
 
 <div class="centered">
 <img src="https://static-content.springer.com/image/art%3A10.3758%2Fs13428-015-0664-2/MediaObjects/13428_2015_664_Fig3_HTML.gif" height=500px>
 </div>
 
-([Nuijten et al., 2015](http://doi.org/10.3758/s13428-015-0664-2))
+<small>([Nuijten et al., 2015](http://doi.org/10.3758/s13428-015-0664-2))</small>
 
-## Conventional practices may be inadequate
+<div class="notes">
+Statistical reporting errors in the published literature are more common that many might think.
+</div>
 
+---
+
+- Automated checking of paper statistics (in American Psychological Association formats) via [Statcheck](http://statcheck.io)
 - Redefine "statistical significance" as $p<.005$? [(Benjamin et al., 2017)](https://dx.doi.org/10.17605/OSF.IO/MKY9J)
 
-## Psychology harder than physics
+## Psychology is harder than physics
+
+---
 
 <div class="centered">
 <img src="https://raw.githubusercontent.com/gilmore-lab/sips-2017-databservatory/master/img/psych-harder-1.jpg" width=800px/>
@@ -252,16 +273,14 @@ And this 2011 paper by Daryl Bem from Cornell purporting to show evidence for Ex
 <img src="https://raw.githubusercontent.com/gilmore-lab/sips-2017-databservatory/master/img/psych-harder-2.jpg" width=800px/>
 </div>
 
-## Behavior has multiple, nested dimensions
+## Behavior multidimensional
 
 <div class="centered">
-<video width="600" height="400" controls>
+<video data-autoplay width="700" height="450" controls>
   <source src="https://nyu.databrary.org/slot/11652/307774,376273/asset/47075/download?inline=true" type="video/mp4">
 Your browser does not support the video tag.
 </video>
-<small>
-([Adolph et al., 2016](https://nyu.databrary.org/volume/232))
-</small>
+<small>([Adolph et al., 2016](https://nyu.databrary.org/volume/232))</small>
 </div>
 
 ## Embedded in networks
@@ -276,16 +295,33 @@ Your browser does not support the video tag.
 <img src="https://www.researchgate.net/profile/Carlo_Miniussi/publication/269877702/figure/fig2/AS:269128527249411@1441176649721/Hierarchical-modular-organisation-of-the-human-connectome-a-Hubs-regions-with-a.png" height=500px>
 </div>
 
-## Sampling is biased
+## Sampling biased
 
-- Much (lab-based) data collected are from **W**estern, **E**ducated **I**ndustrialized, **R**ich, **D**emocratic (WEIRD) populations [[@henrich_weirdest_2010]](http://doi.org/10.1017/S0140525X0999152X)
+- Much (lab-based) data collected are from **W**estern, **E**ducated **I**ndustrialized, **R**ich, **D**emocratic (WEIRD) populations [Henrich et al., 2010](http://doi.org/10.1017/S0140525X0999152X)
 
-## Data are sensitive, hard(er) to share
+---
+
+<div class="centered">
+<img src="http://www.evoanth.net/wp-content/uploads/2014/12/psychologyweird.png" height=500px>
+</br>
+<small><http://www.evoanth.net/2015/01/06/evolutionary-psychology-has-problems-and-it-isnt-getting-better/></small>
+</div>
+
+## Data sensitive, hard(er) to share
 
 - Protect participant's identities
 - Protect from harm/embarrassment
+- Anonymize (effective?) or get permission
 
 # Computation in psychological science
+
+## "Mind-reading" in fMRI
+
+<div class="centered">
+<img src="http://ars.els-cdn.com/content/image/1-s2.0-S0960982211009377-gr1.jpg" height=500px>
+</br>
+<small>([Nishimoto et al., 2011](https://doi.org/10.1016/j.cub.2011.08.031))</small>
+</div>
 
 ## A personal example
 
@@ -310,7 +346,7 @@ Your browser does not support the video tag.
 </video>
 </br>
 <small>
-((Gilmore, 2014)[http://doi.org/http://doi.org/10.17910/B7QG6W])
+([Gilmore, 2014](http://doi.org/http://doi.org/10.17910/B7QG6W))
 </small>
 </div>
 
@@ -342,12 +378,16 @@ Using computer-generated displays like this.
 
 <div class="centered">
 <img src="https://raw.githubusercontent.com/gilmore-lab/gilmore-thomas-fesi-2015/master/figs/1F1/child/figX-channel-wise-effects-1.png" width="800px">
+</br>
+<small>([Gilmore et al., 2015](https://doi.org/10.1371/journal.pone.0157911))</small>
 </div>
 
 ## Adults' brain responses
 
 <div class="centered">
 <img src="https://raw.githubusercontent.com/gilmore-lab/gilmore-thomas-fesi-2015/master/figs/1F1/adult/figX-channel-wise-effects-1.png" width="800px">
+</br>
+<small>([Gilmore et al., 2015](https://doi.org/10.1371/journal.pone.0157911))</small>
 </div>
 
 ## But, what's the input? The *real* input?
@@ -372,14 +412,12 @@ What if I had first-person, observer's-eye views of what infants saw...
 ---
 
 <div class="centered">
-<video width="750" height="450" controls>
+<video data-autoplay width="750" height="450" controls>
   <source src="https://nyu.databrary.org/slot/7740/0,24200/asset/16753/download?inline=true" type="video/mp4">
   Your browser does not support the video tag.
 </video>
 </br>
-<small>
-([Gilmore et al., 2015](http://doi.org/10.17910/B7.116))
-</small>
+<small>([Gilmore et al., 2015](http://doi.org/10.17910/B7.116))</small>
 </div>
 
 <div class="notes">
@@ -404,7 +442,7 @@ And what mothers' saw while they moved together through the very same environmen
   Your browser does not support the video tag.
 </video>
 <small>
-((Jayaraman et al., 2015)[http://doi.org/10.17910/B7988V])
+([Jayaraman et al., 2015](http://doi.org/10.17910/B7988V))
 </small>
 </div>
 
@@ -453,7 +491,7 @@ And what mothers' saw while they moved together through the very same environmen
   Your browser does not support the video tag.
 </video>
 <small>
-((Jayaraman et al., 2015)[http://doi.org/10.17910/B7988V])
+([Jayaraman et al., 2015](http://doi.org/10.17910/B7988V]))
 </small>
 </div>
 
@@ -530,6 +568,7 @@ U.S. | India</br><img src='https://raw.githubusercontent.com/gilmore-lab/temple-
 ## Simulating developmental change {.flexbox .vcenter .smaller}
 
 <div class="centered">
+<small>
 $\begin{pmatrix}\dot{x} \\ \dot{y}\end{pmatrix}=\frac{1}{z}
 \begin{pmatrix}-f & 0 & x\\ 0 & -f  & y \end{pmatrix}
 \begin{pmatrix}{v_x{}}\\ {v_y{}} \\{v_z{}}\end{pmatrix}+
@@ -543,6 +582,7 @@ f^2+y^2 & -xy & -fy
 \omega_{y}\\ 
 \omega_{z}
 \end{pmatrix}$
+</small>
 
 **Geometry of environment/observer**: $(x, y, z)$</br>
 **Translational speed**: $(v_x, v_y, v_z)$</br>
@@ -611,12 +651,23 @@ f^2+y^2 & -xy & -fy
 
 - Computational resources
 - Technical expertise
-- Data sharing
+- For **reproducible** research
+    - Data + code + materials/displays sharing
 
 ---
 
-<iframe src="http://databrary.org" height=550px width=800px>
-</iframe>
+<div class="centered">
+<img src="https://raw.githubusercontent.com/gilmore-lab/sips-2017-databservatory/master/img/databrary.splash.jpg"
+</br>
+<small>[databrary.org](http://databrary.org)</small>
+</div>
+
+## How Databrary is distinctive
+
+- Open sharing among authorized researchers, not public
+- Share identifiable data *with permission*
+- Store, search across, filter among participant & session characteristics
+- Active (during study) curation reduces sharing burden
 
 ## What I've learned
 
@@ -626,19 +677,8 @@ f^2+y^2 & -xy & -fy
 - *Ice cream* is better
     - learning more, faster, making science better
 - Tools matter
-    - RStudio and literate programming
+    - [RStudio](http://rstudio.com) and literate programming
     - git, GitHub and version control
-
-<!-- ## Play & Learning Across a Year (PLAY) -->
-
-<!-- - $n=900$ families from 30 sites across the U.S. -->
-<!-- - Record "an hour in the life" of mothers & infants at 12-, 18-, & 24 months-of-age -->
-<!-- - Human-applied *transcripts* and time-locked codes for *language*, *emotional expression*, *object interaction*, and *locomotion* -->
-
-<!-- --- -->
-
-<!-- - Family structure, health, ambient sound levels, room-by-room dimensions -->
-<!-- - Stored and shared (at project's end) on Databrary **with permission** from participant families **for researchers** -->
 
 # Let's not waste a "good" crisis
 
@@ -661,10 +701,8 @@ I urge you to read it.
 
 ## Collect & share video as data and documentation
 
-<!-- Add Gilmore & Adolph image -->
-
 <div class="centered">
-<img src="" height=500px>
+<img src="https://raw.githubusercontent.com/gilmore-lab/sips-2017-video-reproducibility/master/img/gilmore-adolph-nat-hum-beh.jpg" height=550px>
 </div>
 
 <div class="notes">
@@ -674,40 +712,122 @@ Karen Adolph at NYU is my partner in founding and directing the Databrary projec
 ## Increase sample sizes
 
 - Collect larger samples
+- Continue smaller samples, but...
 - Standardize metadata about participants, settings, measures & tasks to accelerate meta- and mega-analyses
 
 ## Support data repositories
 
 - Funder, journal mandates for sharing increasing
 - But no long-term, stable, funding sources for curation, archiving, sharing
+- ArXiv model
+    - Institutional (Cornell) support
+    - Subscription
 
 ## Build platforms for discovery
 
 - Data + analysis
-- e.g., BioSTAR
+- e.g., PSU's [Biostars](https://www.biostars.org/)
 
 ---
 
 <div class="centered">
-<img src="https://upload.wikimedia.org/wikipedia/commons/3/3f/HST-SM4.jpeg" height=450px>
+<img src="https://upload.wikimedia.org/wikipedia/commons/3/3f/HST-SM4.jpeg" height=550px>
 </div>
 
 ---
 
 <div class="centered">
 <a href="https://en.wikipedia.org/wiki/Hubble_Ultra-Deep_Field">
-<img src="https://upload.wikimedia.org/wikipedia/commons/6/69/NASA-HS201427a-HubbleUltraDeepField2014-20140603.jpg" height=500px>
+<img src="https://upload.wikimedia.org/wikipedia/commons/6/69/NASA-HS201427a-HubbleUltraDeepField2014-20140603.jpg" height=550px>
 </a>
 </div>
 
 <div class="notes">
-The Hubble Ultra Deep Field. Taken over 3.5 months in 2003-04. Contains an estimated 10,000 galaxies, and because time and space collapse at astronomical distances, looks back ~13 billion years, or 400-800 years before the big bang.
+The Hubble Ultra Deep Field. Taken over 3.5 months in 2003-04. Contains an estimated 10,000 galaxies, and because time and space collapse at astronomical distances, looks back ~13 billion years, or 400-800 years before the big bang. So what would the Hubble telescope for human health and behavior look like?
+</div>
+
+## Data from diverse domains
+
+<div class="centered">
+<a href="http://www.thehumanproject.org">
+<img src="https://raw.githubusercontent.com/gilmore-lab/sips-2017-databservatory/master/img/thehumanproject.org.jpg" height=480px>
+</a>
+</div>
+
+## Link measures across people
+
+<div class="centered">
+<a href="http://www.openhumans.org">
+<img src="https://raw.githubusercontent.com/gilmore-lab/sips-2017-databservatory/master/img/openhumans.org.jpg" height=480px>
+</a>
+</div>
+
+## Web-based data visualization, analysis
+
+<div class="centered">
+<video width="720" height="450" controls>
+  <source src="https://raw.githubusercontent.com/gilmore-lab/sips-2017-databservatory/master/mov/neurosynth-happy.mp4" type="video/mp4">
+Your browser does not support the video tag.
+</video>
 </div>
 
 ---
 
 <div class="centered">
-<img src="https://media.licdn.com/mpr/mpr/shrinknp_800_800/AAEAAQAAAAAAAAW9AAAAJDRhMTc5OGYyLWE4MzItNDNlOS1hMDJjLTllOGU2ZTNiNmMzNg.jpg" height=450px>
+<a href="http://www.socialexplorer.com/">
+<div class="centered">
+<img src="https://raw.githubusercontent.com/gilmore-lab/sips-2017-databservatory/master/img/social-explorer.jpg" height=450px>
+</div>
+</a>
+</div>
+
+---
+
+<div class="centered">
+<video width="720" height="450" controls>
+  <source src="https://raw.githubusercontent.com/gilmore-lab/sips-2017-databservatory/master/mov/wordbank-vocabulary.mp4" type="video/mp4">
+Your browser does not support the video tag.
+</video>
+</div>
+
+## Search, filtering by personal characteristics
+
+<div class="centered">
+<a href="http://ndar.nih.gov">
+<img src="https://raw.githubusercontent.com/gilmore-lab/sips-2017-databservatory/master/img/ndar.jpg" height=475px>
+</a>
+</div>
+
+## Self/active curation of data, materials
+
+<div class="centered">
+<img src="https://raw.githubusercontent.com/gilmore-lab/sips-2017-databservatory/master/img/osf-io.jpg" height=480px/>
+</div>
+
+## Consistent, clear sharing permissions structure
+
+<div class="centered">
+<img src="https://raw.githubusercontent.com/gilmore-lab/sips-2017-databservatory/master/img/databrary.splash.jpg" height=480px>
+</div>
+
+## Progress
+
+| Example | Multi-measure | Indiv link/search | Visualize | Self-curate | Permissions |
+|---------|---------------|------------|-----------|-------|----|
+| Databrary   | &#x2714; | &#x2714; | tabular | &#x2714; |&#x2714; |
+| Human Proj  | &#x2714; | &#x2714; | ? | ? | &#x2714; |
+| ICPSR       | &#x2714; | ? | &#x2714; | ? | &#x2714; |
+| Neurosynth  | fMRI BOLD | group data | &#x2714; | public | NA |
+| OpenNeuro   | &#x2714; |   ?       | &#x2714; | &#x2714; | public |
+| Open Humans | &#x2714; | &#x2714; | ? | ? |  &#x2714; |
+| OSF         | &#x2714; |          | | &#x2714; | public |
+| WordBank    | M-CDI | group metadata | &#x2714; | ? | public |
+
+
+---
+
+<div class="centered">
+<img src="https://media.licdn.com/mpr/mpr/shrinknp_800_800/AAEAAQAAAAAAAAW9AAAAJDRhMTc5OGYyLWE4MzItNDNlOS1hMDJjLTllOGU2ZTNiNmMzNg.jpg" height=500px>
 </div>
 
 <div class="notes">
@@ -717,7 +837,7 @@ In closing, I'd like us to step outside of our narrow disciplinary silos.
 ---
 
 <div class="centered">
-<img src="http://cdn2.hubspot.net/hub/134568/file-1208368053-jpg/6-blind-men-hans.jpg" height=450px>
+<img src="http://cdn2.hubspot.net/hub/134568/file-1208368053-jpg/6-blind-men-hans.jpg" height=500px>
 </div>
 
 <div class="notes">
@@ -727,18 +847,28 @@ To make the future of big data behavioral science one where we're not just blind
 ---
 
 <div class="centered">
-<img src="http://static.neatorama.com/images/2012-09/girl-hugging-elephant.jpg" height=450px>
+<img src="http://static.neatorama.com/images/2012-09/girl-hugging-elephant.jpg" height=500px>
 </div>
 
 <div class="notes">
 But where we take off our opaque glasses and embrace the whole glorious animal.
 </div>
 
+---
+
+<div class="centered">
+<img src="https://www.theclio.com/web/ul/19887.40334.jpg" height=550>
+</div>
+
+<div class="notes">
+Let's build it here.
+</div>
+
 # Thank you!
 
 ## Stack
 
-This talk was produced on `r Sys.Date()` in [RStudio Server Pro](http://rstudio.com) using R Markdown and the reveal.JS framework.
+This talk was produced on `r Sys.Date()` in [RStudio Server Pro](http://rstudio.com) using R Markdown and the reveal.JS framework on Penn State's [ACI-ICS RStudio Server Pro instance](http://rstudio.aci.ics.psu.edu).
 The code and materials used to generate the slides may be found at <https://github.com/gilmore-lab/aci-ics-2017-09-07/>.
 Information about the R Session that produced the code is as follows:
 
