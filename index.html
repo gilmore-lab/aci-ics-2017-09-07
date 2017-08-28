@@ -1030,10 +1030,63 @@ document.getElementsByTagName('head')[0].appendChild(style);
 <ul>
 <li>learning more, faster, making science better</li>
 </ul></li>
+</ul>
+</section><section id="what-ive-learned-1" class="slide level2">
+<h1>What I’ve learned</h1>
+<ul>
 <li>Tools matter
 <ul>
 <li><a href="http://rstudio.com">RStudio</a> and literate programming</li>
 <li>git, GitHub and version control</li>
+</ul></li>
+</ul>
+</section><section class="slide level2">
+
+<div class="centered">
+<p><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/4d/Rstudio.png/1200px-Rstudio.png" height=500px></p>
+</div>
+<aside class="notes">
+<p>Here’s a depiction of the RStudio workspace. It is an integrated development environment for the R programming language.</p>
+</aside>
+</section><section class="slide level2">
+
+<pre><code>## Joining multiple datasets
+
+Fancy approach to multiple dataset merge. Joins datasets two at a time from left to right in the list. The result of a two-table join becomes the &#39;x&#39; dataset for the next join of a new dataset &#39;y&#39;.
+
+df1 &lt;- data.frame(id=1:10, x=rnorm(10), y=runif(10))
+df2 &lt;- data.frame(id=1:11, z=rnorm(11), a=runif(11))
+df3 &lt;- data.frame(id=2:10, b=rnorm(9), c=runif(9))
+
+Reduce(function(...) { full_join(...) }, list(df1, df2, df3))</code></pre>
+</section><section id="r-markdown" class="slide level2">
+<h1>R Markdown</h1>
+<ul>
+<li>One document format</li>
+<li>Many outputs
+<ul>
+<li>HTML slides (like this one)</li>
+<li>PDF, MS Word, Markdown documents</li>
+<li>Web sites, blogs</li>
+<li>Books</li>
+</ul></li>
+</ul>
+</section><section class="slide level2">
+
+<div class="centered">
+<p><img src="https://www.dataquest.io/blog/images/jupyter/interface-screenshot.png" height=500px></p>
+</div>
+<aside class="notes">
+<p>And here is the Jupyter notebook. It provides an interactive shell for python or other languages that allow text, images, and code to be integrated and interleaved.</p>
+</aside>
+</section><section id="next-generation-of-scientific-publishing" class="slide level2">
+<h1>Next generation of scientific publishing</h1>
+<ul>
+<li>Lab notebooks that embody literate programming principles</li>
+<li>Close links between data collection, cleaning, analysis, data repositories, preprints, publishers</li>
+<li>Persistent identifiers for research materials, code, &amp; resources
+<ul>
+<li>All published figures, data tables, data sets, analysis code…</li>
 </ul></li>
 </ul>
 </section></section>
@@ -1253,7 +1306,7 @@ document.getElementsByTagName('head')[0].appendChild(style);
 </section></section>
 <section><section id="thank-you" class="titleslide slide level1"><h1>Thank you!</h1></section><section id="stack" class="slide level2">
 <h1>Stack</h1>
-<p>This talk was produced on 2017-08-24 in <a href="http://rstudio.com">RStudio Server Pro</a> using R Markdown and the reveal.JS framework on Penn State’s <a href="http://rstudio.aci.ics.psu.edu">ACI-ICS RStudio Server Pro instance</a>. The code and materials used to generate the slides may be found at <a href="https://github.com/gilmore-lab/aci-ics-2017-09-07/" class="uri">https://github.com/gilmore-lab/aci-ics-2017-09-07/</a>. Information about the R Session that produced the code is as follows:</p>
+<p>This talk was produced on 2017-08-28 in <a href="http://rstudio.com">RStudio Server Pro</a> using R Markdown and the reveal.JS framework on Penn State’s <a href="http://rstudio.aci.ics.psu.edu">ACI-ICS RStudio Server Pro instance</a>. The code and materials used to generate the slides may be found at <a href="https://github.com/gilmore-lab/aci-ics-2017-09-07/" class="uri">https://github.com/gilmore-lab/aci-ics-2017-09-07/</a>. Information about the R Session that produced the code is as follows:</p>
 <pre><code>## R version 3.4.0 (2017-04-21)
 ## Platform: x86_64-redhat-linux-gnu (64-bit)
 ## Running under: Red Hat Enterprise Linux Server release 6.9 (Santiago)
