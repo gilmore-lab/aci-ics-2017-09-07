@@ -121,6 +121,7 @@ These definitions help put some of the presumed causes into perspective.
 
 ## Reproducibility crisis
 
+- Not just psychology
 - "Hard" sciences, too
 - Data collection to statistical analysis to reporting to publishing
 
@@ -259,20 +260,6 @@ Statistical reporting errors in the published literature are more common that ma
 - Automated checking of paper statistics (in American Psychological Association formats) via [Statcheck](http://statcheck.io)
 - Redefine "statistical significance" as $p<.005$? [(Benjamin et al., 2017)](https://dx.doi.org/10.17605/OSF.IO/MKY9J)
 
-## Psychology is harder than physics
-
----
-
-<div class="centered">
-<img src="https://raw.githubusercontent.com/gilmore-lab/sips-2017-databservatory/master/img/psych-harder-1.jpg" width=800px/>
-</div>
-
----
-
-<div class="centered">
-<img src="https://raw.githubusercontent.com/gilmore-lab/sips-2017-databservatory/master/img/psych-harder-2.jpg" width=800px/>
-</div>
-
 ## Behavior multidimensional
 
 <div class="centered">
@@ -312,6 +299,20 @@ Your browser does not support the video tag.
 - Protect participant's identities
 - Protect from harm/embarrassment
 - Anonymize (effective?) or get permission
+
+## Psychology is harder than physics
+
+---
+
+<div class="centered">
+<img src="https://raw.githubusercontent.com/gilmore-lab/sips-2017-databservatory/master/img/psych-harder-1.jpg" width=800px/>
+</div>
+
+---
+
+<div class="centered">
+<img src="https://raw.githubusercontent.com/gilmore-lab/sips-2017-databservatory/master/img/psych-harder-2.jpg" width=800px/>
+</div>
 
 # Computation in psychological science
 
@@ -651,10 +652,13 @@ f^2+y^2 & -xy & -fy
 
 - Computational resources
 - Technical expertise
-- For **reproducible** research
-    - Data + code + materials/displays sharing
 
----
+
+## Attend to workflows
+
+- Kitzes, J., Turek, D., & Deniz, F. (Eds.). (2018). The Practice of Reproducible Research: Case Studies and Lessons from the Data-Intensive Sciences. Oakland, CA: University of California Press. [E-book](https://www.gitbook.com/book/bids/the-practice-of-reproducible-research/details).
+
+## Plan for **reproducible** research
 
 <div class="centered">
 <img src="https://raw.githubusercontent.com/gilmore-lab/sips-2017-databservatory/master/img/databrary.splash.jpg"
@@ -664,29 +668,33 @@ f^2+y^2 & -xy & -fy
 
 ## How Databrary is distinctive
 
-- Open sharing among authorized researchers, not public
+- Open sharing among *authorized researchers*, not public
 - Share identifiable data *with permission*
 - Store, search across, filter among participant & session characteristics
-- Active (during study) curation reduces sharing burden
+- Active (during study) curation reduces post hoc burden
 
 ## What I've learned
 
-- Many barriers to open science
-- Technology + culture
-- Carrots, sticks are fine
-- *Ice cream* is better
-    - learning more, faster, making science better
+- Barriers to reproducibility
+    - Cultural
+    - Technological
+
+---
+
+<div class="centered">
+<img src="https://i.pinimg.com/originals/9b/f4/e5/9bf4e5a1d584bc6065c3e3231f9b3220.gif" height=550px>
+</div>
 
 ## What I've learned
 
 - Tools matter
-    - [RStudio](http://rstudio.com) and literate programming
+    - [RStudio](http://rstudio.com) & [Project Jupyter](http://jupyter.org) and literate programming
     - git, GitHub and version control
     
 ---
 
 <div class="centered">
-<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/4d/Rstudio.png/1200px-Rstudio.png" height=500px>
+<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/4d/Rstudio.png/1200px-Rstudio.png" height=550px>
 </div>
 
 <div class="notes">
@@ -699,27 +707,30 @@ Here's a depiction of the RStudio workspace. It is an integrated development env
 ## Joining multiple datasets
 
 Fancy approach to multiple dataset merge. Joins datasets two at a time from left to right in the list. The result of a two-table join becomes the 'x' dataset for the next join of a new dataset 'y'.
+```
 
+<pre><code>```{r data-frame-demo}
 df1 <- data.frame(id=1:10, x=rnorm(10), y=runif(10))
 df2 <- data.frame(id=1:11, z=rnorm(11), a=runif(11))
 df3 <- data.frame(id=2:10, b=rnorm(9), c=runif(9))
 
 Reduce(function(...) { full_join(...) }, list(df1, df2, df3))
-```
+```</code></pre>
 
 ## R Markdown
 
 - One document format
+    - Text, images, movies, data plots, code (not just R), commentary, citations, equations
 - Many outputs
     - HTML slides (like this one)
-    - PDF, MS Word, Markdown documents
-    - Web sites, blogs
-    - Books
+    - PDF, MS Word, Markdown documents, even full manuscripts!
+    - [Web sites](http://gilmore-lab.github.io), [blogs](http://rick-gilmore.com)
+    - [Books](http://bookdown.org)
 
 ---
 
 <div class="centered">
-<img src="https://www.dataquest.io/blog/images/jupyter/interface-screenshot.png" height=500px>
+<img src="https://www.dataquest.io/blog/images/jupyter/interface-screenshot.png" height=550px>
 </div>
 
 <div class="notes">
@@ -854,13 +865,13 @@ Your browser does not support the video tag.
 ## Self/active curation of data, materials
 
 <div class="centered">
-<img src="https://raw.githubusercontent.com/gilmore-lab/sips-2017-databservatory/master/img/osf-io.jpg" height=480px/>
+<img src="https://raw.githubusercontent.com/gilmore-lab/sips-2017-databservatory/master/img/osf-io.jpg" height=500px/>
 </div>
 
 ## Consistent, clear sharing permissions structure
 
 <div class="centered">
-<img src="https://raw.githubusercontent.com/gilmore-lab/sips-2017-databservatory/master/img/databrary.splash.jpg" height=480px>
+<img src="https://raw.githubusercontent.com/gilmore-lab/sips-2017-databservatory/master/img/databrary.splash.jpg" height=500px>
 </div>
 
 ## Progress
@@ -880,7 +891,7 @@ Your browser does not support the video tag.
 ---
 
 <div class="centered">
-<img src="https://media.licdn.com/mpr/mpr/shrinknp_800_800/AAEAAQAAAAAAAAW9AAAAJDRhMTc5OGYyLWE4MzItNDNlOS1hMDJjLTllOGU2ZTNiNmMzNg.jpg" height=500px>
+<img src="https://media.licdn.com/mpr/mpr/shrinknp_800_800/AAEAAQAAAAAAAAW9AAAAJDRhMTc5OGYyLWE4MzItNDNlOS1hMDJjLTllOGU2ZTNiNmMzNg.jpg" height=550px>
 </div>
 
 <div class="notes">
@@ -890,7 +901,7 @@ In closing, I'd like us to step outside of our narrow disciplinary silos.
 ---
 
 <div class="centered">
-<img src="http://cdn2.hubspot.net/hub/134568/file-1208368053-jpg/6-blind-men-hans.jpg" height=500px>
+<img src="http://cdn2.hubspot.net/hub/134568/file-1208368053-jpg/6-blind-men-hans.jpg" height=550px>
 </div>
 
 <div class="notes">
@@ -900,7 +911,7 @@ To make the future of big data behavioral science one where we're not just blind
 ---
 
 <div class="centered">
-<img src="http://static.neatorama.com/images/2012-09/girl-hugging-elephant.jpg" height=500px>
+<img src="http://static.neatorama.com/images/2012-09/girl-hugging-elephant.jpg" height=550px>
 </div>
 
 <div class="notes">
@@ -910,7 +921,7 @@ But where we take off our opaque glasses and embrace the whole glorious animal.
 ---
 
 <div class="centered">
-<img src="https://www.theclio.com/web/ul/19887.40334.jpg" height=550>
+<img src="https://www.theclio.com/web/ul/19887.40334.jpg" height=550px>
 </div>
 
 <div class="notes">
@@ -918,6 +929,11 @@ Let's build it here.
 </div>
 
 # Thank you!
+
+## Keep in touch {.vcenter .flexbox}
+
+### rogilmore@psu.edu
+### [gilmore-lab.github.io](http://gilmore-lab-github.io)
 
 ## Stack
 
