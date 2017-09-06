@@ -13,7 +13,7 @@ output:
     reveal_options:
       slideNumber: true
       previewLinks: false
-      center: false
+      center: true
       touch: true
   ioslides_presentation:
     widescreen: true
@@ -42,7 +42,7 @@ I thank NSF, NICHD, SRCD, and the Sloan Foundation for support.
 ## Overview
 
 - The reproducibility "crisis"
-- The crisis in psychology
+- The "crisis"" in psychology
 - "Big data" behavioral science is computationally intensive
 - Let's not waste a "good" crisis
 
@@ -93,13 +93,35 @@ Clearly, the significant or slight crisis in reproducibility extends across scie
 
 ## What does "reproducibility" mean?
 
-- **Methods reproducibility**
-    - Enough details about materials & methods recorded (& reported)
-    - Same results with same materials & methods
-- **Results reproducibility**
-    - Same results from independent study
-- **Inferential reproducibility**
-    - Same inferences from one or more studies or reanalyses
+
+---
+
+Should a published study contain sufficient information for an independent expert to reproduce the reported findings without consultation with or assistance from the original authors?
+
+## *Methods* reproducibility
+
+- Enough details about materials & methods recorded (& reported)
+- Same results with same materials & methods
+
+<small>([Goodman et al., 2016](http://doi.org/10.1126/scitranslmed.aaf5027))</small>
+
+<div class="notes">
+Goodman et al. advocate a new lexicon for reproducibility where...
+</div>
+
+## *Results* reproducibility
+
+- Same results from independent study
+
+<small>([Goodman et al., 2016](http://doi.org/10.1126/scitranslmed.aaf5027))</small>
+
+<div class="notes">
+Goodman et al. advocate a new lexicon for reproducibility where...
+</div>
+
+## *Inferential* reproducibility
+
+- Same inferences from one or more studies or reanalyses
     
 <small>([Goodman et al., 2016](http://doi.org/10.1126/scitranslmed.aaf5027))</small>
 
@@ -255,10 +277,10 @@ But a careful, post-publication re-evaluation showed that Bem had made a number 
 Statistical reporting errors in the published literature are more common that many might think.
 </div>
 
----
+<!-- - Automated checking of paper statistics (in American Psychological Association formats) via [Statcheck](http://statcheck.io) -->
+<!-- - Redefine "statistical significance" as $p<.005$? [(Benjamin et al., 2017)](https://dx.doi.org/10.17605/OSF.IO/MKY9J) -->
 
-- Automated checking of paper statistics (in American Psychological Association formats) via [Statcheck](http://statcheck.io)
-- Redefine "statistical significance" as $p<.005$? [(Benjamin et al., 2017)](https://dx.doi.org/10.17605/OSF.IO/MKY9J)
+## In our defense...
 
 ## Behavior multidimensional
 
@@ -282,9 +304,9 @@ Your browser does not support the video tag.
 <img src="https://www.researchgate.net/profile/Carlo_Miniussi/publication/269877702/figure/fig2/AS:269128527249411@1441176649721/Hierarchical-modular-organisation-of-the-human-connectome-a-Hubs-regions-with-a.png" height=500px>
 </div>
 
-## Sampling biased
+## Humans are diverse
 
-- Much (lab-based) data collected are from **W**estern, **E**ducated **I**ndustrialized, **R**ich, **D**emocratic (WEIRD) populations [Henrich et al., 2010](http://doi.org/10.1017/S0140525X0999152X)
+- But much (lab-based) data collected are from **W**estern, **E**ducated **I**ndustrialized, **R**ich, **D**emocratic (WEIRD) populations [Henrich et al., 2010](http://doi.org/10.1017/S0140525X0999152X)
 
 ---
 
@@ -314,7 +336,7 @@ Your browser does not support the video tag.
 <img src="https://raw.githubusercontent.com/gilmore-lab/sips-2017-databservatory/master/img/psych-harder-2.jpg" width=800px/>
 </div>
 
-# Computation in psychological science
+# Big data computation in psychological science
 
 ## "Mind-reading" in fMRI
 
@@ -675,9 +697,10 @@ f^2+y^2 & -xy & -fy
 
 ## What I've learned
 
-- Barriers to reproducibility
-    - Cultural
-    - Technological
+## Barriers to reproducibility
+
+- Cultural
+- Technological
 
 ---
 
@@ -685,11 +708,16 @@ f^2+y^2 & -xy & -fy
 <img src="https://i.pinimg.com/originals/9b/f4/e5/9bf4e5a1d584bc6065c3e3231f9b3220.gif" height=550px>
 </div>
 
-## What I've learned
+---
 
-- Tools matter
-    - [RStudio](http://rstudio.com) & [Project Jupyter](http://jupyter.org) and literate programming
-    - git, GitHub and version control
+> "...psychologists tend to treat other peoples’ theories like toothbrushes; no self-respecting individual wants to use anyone else’s."
+
+[Walter Mischel, 2009](https://www.psychologicalscience.org/observer/becoming-a-cumulative-science)
+
+##  Tools matter
+
+- [RStudio](http://rstudio.com) & [Project Jupyter](http://jupyter.org) and literate programming
+- git, GitHub and version control
     
 ---
 
