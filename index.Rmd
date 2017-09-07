@@ -17,6 +17,7 @@ output:
       touch: true
   ioslides_presentation:
     widescreen: true
+  html_document: default
 ---
 
 ```{r setup, include=FALSE}
