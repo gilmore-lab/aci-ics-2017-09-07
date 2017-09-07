@@ -1,5 +1,5 @@
 ---
-title: "Reproducibility in Computationally-Intensive Behavioral Research"
+title: "Reproducibility in Computationally Intensive Behavioral Research"
 author: "Rick O. Gilmore"
 date: "`r Sys.time()`"
 output:
@@ -45,7 +45,7 @@ I thank NSF, NICHD, SRCD, and the Sloan Foundation for support.
 ## Overview
 
 - The reproducibility "crisis"
-- The "crisis"" in psychology
+- The "crisis" in psychology
 - "Big data" behavioral science is computationally intensive
 - Let's not waste a "good" crisis
 
@@ -528,7 +528,7 @@ grViz("
 ---
 
 <div class="centered">
-<video width="640" height="480" controls>
+<video data-autoplay height="480" controls>
   <source src="https://nyu.databrary.org/slot/11680/51000,75500/asset/41875/download?inline=true" type="video/mp4">
   Your browser does not support the video tag.
 </video>

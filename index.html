@@ -4,7 +4,7 @@
   <meta charset="utf-8">
   <meta name="generator" content="pandoc">
   <meta name="author" content="Rick O. Gilmore" />
-  <title>Reproducibility in Computationally-Intensive Behavioral Research</title>
+  <title>Reproducibility in Computationally Intensive Behavioral Research</title>
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
@@ -453,9 +453,9 @@ document.getElementsByTagName('head')[0].appendChild(style);
     <div class="slides">
 
 <section>
-    <h1 class="title">Reproducibility in Computationally-Intensive Behavioral Research</h1>
+    <h1 class="title">Reproducibility in Computationally Intensive Behavioral Research</h1>
     <h2 class="author">Rick O. Gilmore</h2>
-    <h3 class="date">2017-09-07 12:35:00</h3>
+    <h3 class="date">2017-09-07 16:57:17</h3>
 </section>
 
 <section><section id="preliminaries" class="titleslide slide level1"><h1>Preliminaries</h1></section><section class="slide level2">
@@ -468,7 +468,7 @@ document.getElementsByTagName('head')[0].appendChild(style);
 <h1>Overview</h1>
 <ul>
 <li>The reproducibility “crisis”</li>
-<li>The “crisis”&quot; in psychology</li>
+<li>The “crisis” in psychology</li>
 <li>“Big data” behavioral science is computationally intensive</li>
 <li>Let’s not waste a “good” crisis</li>
 </ul>
@@ -723,8 +723,8 @@ document.getElementsByTagName('head')[0].appendChild(style);
 </div>
 </section><section class="slide level2">
 
-<div id="htmlwidget-fb22304bcadb8009f6de" style="width:768px;height:576px;" class="grViz html-widget"></div>
-<script type="application/json" data-for="htmlwidget-fb22304bcadb8009f6de">{"x":{"diagram":"\n  digraph {\n\t  style=filled\n\t\tcolor=lightgrey\n\t\tnode [style=filled, color=lightblue]\n    template -> {regis}\n\t\tperson_i -> {sMRI, fMRI, survey, task, meta}\n    sMRI -> regis\n    regis -> fMRI\n    {survey, task} -> cleaning\n    {fMRI, cleaning, meta} -> indiv_analysis\n\t\t}","config":{"engine":"dot","options":null}},"evals":[],"jsHooks":[]}</script>
+<div id="htmlwidget-1fb3930e2ead338c418e" style="width:768px;height:576px;" class="grViz html-widget"></div>
+<script type="application/json" data-for="htmlwidget-1fb3930e2ead338c418e">{"x":{"diagram":"\n  digraph {\n\t  style=filled\n\t\tcolor=lightgrey\n\t\tnode [style=filled, color=lightblue]\n    template -> {regis}\n\t\tperson_i -> {sMRI, fMRI, survey, task, meta}\n    sMRI -> regis\n    regis -> fMRI\n    {survey, task} -> cleaning\n    {fMRI, cleaning, meta} -> indiv_analysis\n\t\t}","config":{"engine":"dot","options":null}},"evals":[],"jsHooks":[]}</script>
 </section><section id="a-personal-example" class="slide level2">
 <h1>A personal example</h1>
 <ul>
@@ -809,8 +809,8 @@ document.getElementsByTagName('head')[0].appendChild(style);
 </div>
 </section><section class="slide level2">
 
-<div id="htmlwidget-bceab1ac2683112701f2" style="width:768px;height:576px;" class="grViz html-widget"></div>
-<script type="application/json" data-for="htmlwidget-bceab1ac2683112701f2">{"x":{"diagram":"\n  digraph {\n\t  style=filled\n\t\tcolor=lightgrey\n\t\tnode [style=filled, color=lightblue]\n\t\t{mom_i, baby_i} -> video\n    video -> align_clip\n    align_clip -> ffmpeg\n    ffmpeg -> frame_seq\n    frame_seq -> {radial_filt, linear_filt, rot_filt}\n    {radial_filt, linear_filt, rot_filt} -> stats\n\t\t}","config":{"engine":"dot","options":null}},"evals":[],"jsHooks":[]}</script>
+<div id="htmlwidget-8c3aa8a9d491a9f8d516" style="width:768px;height:576px;" class="grViz html-widget"></div>
+<script type="application/json" data-for="htmlwidget-8c3aa8a9d491a9f8d516">{"x":{"diagram":"\n  digraph {\n\t  style=filled\n\t\tcolor=lightgrey\n\t\tnode [style=filled, color=lightblue]\n\t\t{mom_i, baby_i} -> video\n    video -> align_clip\n    align_clip -> ffmpeg\n    ffmpeg -> frame_seq\n    frame_seq -> {radial_filt, linear_filt, rot_filt}\n    {radial_filt, linear_filt, rot_filt} -> stats\n\t\t}","config":{"engine":"dot","options":null}},"evals":[],"jsHooks":[]}</script>
 </section><section id="frame-by-frame-video-analysis" class="slide level2">
 <h1>Frame-by-frame video analysis</h1>
 <div class="centered">
@@ -832,7 +832,7 @@ document.getElementsByTagName('head')[0].appendChild(style);
 </section><section class="slide level2">
 
 <div class="centered">
-<video width="640" height="480" controls>
+<video data-autoplay height="480" controls>
 <source src="https://nyu.databrary.org/slot/11680/51000,75500/asset/41875/download?inline=true" type="video/mp4"> Your browser does not support the video tag.
 </video>
 </div>
