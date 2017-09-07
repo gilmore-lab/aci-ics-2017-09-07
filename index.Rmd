@@ -21,8 +21,10 @@ output:
 
 ```{r setup, include=FALSE}
 if(!("revealjs" %in% installed.packages()[,1])) {
-  install.packages("revealjs")
-  require("revealjs")}
+  install.packages("revealjs") }
+require("revealjs")
+require("DiagrammeR")
+
 knitr::opts_chunk$set(echo = FALSE)
 ```
 
@@ -50,10 +52,10 @@ I thank NSF, NICHD, SRCD, and the Sloan Foundation for support.
 
 ## Is there a reproducibility crisis?
 
-- Yes, a significant crisis
-- Yes, a slight crisis
-- No crisis
-- Don't know
+>- Yes, a significant crisis
+>- Yes, a slight crisis
+>- No crisis
+>- Don't know
 
 ---
 
@@ -80,23 +82,11 @@ Nature conducted a survey of some 1,600 scientists in 2016. They were asked this
 <div class="notes">
 </div>
 
----
-
-<div class="centered">
-<img src="https://cdn.shopify.com/s/files/1/0877/5762/products/Rigor_Mortis_1024x1024.jpg?v=1491240110" height=550px/>
-</div>
-
-<div class="notes">
-Clearly, the significant or slight crisis in reproducibility extends across scientific domains. Indeed, the NPR science reporter Richard Harris in a book published earlier this year said that sloppy biomedical research creates worthless cures, crushes hope, costs billions.
-</div>
-
-
 ## What does "reproducibility" mean?
 
+<!-- --- -->
 
----
-
-Should a published study contain sufficient information for an independent expert to reproduce the reported findings without consultation with or assistance from the original authors?
+<!-- Should a published study contain sufficient information for an independent expert to reproduce the reported findings without consultation with or assistance from the original authors? -->
 
 ## *Methods* reproducibility
 
@@ -146,6 +136,18 @@ These definitions help put some of the presumed causes into perspective.
 - Not just psychology
 - "Hard" sciences, too
 - Data collection to statistical analysis to reporting to publishing
+
+---
+
+<div class="centered">
+<img src="https://cdn.shopify.com/s/files/1/0877/5762/products/Rigor_Mortis_1024x1024.jpg?v=1491240110" height=550px/>
+</div>
+
+<div class="notes">
+Clearly, the significant or slight crisis in reproducibility extends across scientific domains. 
+Indeed, the NPR science reporter Richard Harris in a book published earlier this year said that sloppy biomedical research creates worthless cures, crushes hope, costs billions.
+But rather than cast aspersions on other fields, let me own the sins of my own.
+</div>
 
 # The crisis in psychology
 
@@ -249,7 +251,7 @@ And this 2011 paper by Daryl Bem from Cornell purporting to show evidence for Ex
 ---
 
 <div class="centered">
-<img src="https://vignette2.wikia.nocookie.net/minority-report/images/f/f0/Wally_and_the_Precogs.jpeg/revision/latest?cb=20170804220557" height=550>
+<img src="https://vignette.wikia.nocookie.net/45e9dc22-281b-41a5-93a7-f508a99b8722/scale-to-width-down/627" height=550>
 </div>
 
 <div class="notes">
@@ -265,7 +267,7 @@ Yes, Bem was arguing for some sort of "Minority Report"-like evidence for precog
 But a careful, post-publication re-evaluation showed that Bem had made a number of small, defensible given current practices, errors that accumulated across his paper. None of them were picked up in review.
 </div>
 
-## Statistical errors
+## The sin of hurrying...
 
 <div class="centered">
 <img src="https://static-content.springer.com/image/art%3A10.3758%2Fs13428-015-0664-2/MediaObjects/13428_2015_664_Fig3_HTML.gif" height=500px>
@@ -276,9 +278,6 @@ But a careful, post-publication re-evaluation showed that Bem had made a number 
 <div class="notes">
 Statistical reporting errors in the published literature are more common that many might think.
 </div>
-
-<!-- - Automated checking of paper statistics (in American Psychological Association formats) via [Statcheck](http://statcheck.io) -->
-<!-- - Redefine "statistical significance" as $p<.005$? [(Benjamin et al., 2017)](https://dx.doi.org/10.17605/OSF.IO/MKY9J) -->
 
 ## In our defense...
 
@@ -345,6 +344,23 @@ Your browser does not support the video tag.
 </br>
 <small>([Nishimoto et al., 2011](https://doi.org/10.1016/j.cub.2011.08.031))</small>
 </div>
+
+---
+
+```{r mri-workflow}
+grViz("
+  digraph {
+	  style=filled
+		color=lightgrey
+		node [style=filled, color=lightblue]
+    template -> {regis}
+		person_i -> {sMRI, fMRI, survey, task, meta}
+    sMRI -> regis
+    regis -> fMRI
+    {survey, task} -> cleaning
+    {fMRI, cleaning, meta} -> indiv_analysis
+		}")
+```
 
 ## A personal example
 
@@ -456,6 +472,24 @@ And what mothers' saw while they moved together through the very same environmen
 ([Adolph, 2015](http://doi.org/10.17910/B7.123))
 </small>
 </div>
+
+---
+
+```{r optic-flow-video-workflow}
+grViz("
+  digraph {
+	  style=filled
+		color=lightgrey
+		node [style=filled, color=lightblue]
+		{mom_i, baby_i} -> video
+    video -> align_clip
+    align_clip -> ffmpeg
+    ffmpeg -> frame_seq
+    frame_seq -> {radial_filt, linear_filt, rot_filt}
+    {radial_filt, linear_filt, rot_filt} -> stats
+		}")
+```
+
 
 ## Frame-by-frame video analysis
 
@@ -672,15 +706,14 @@ f^2+y^2 & -xy & -fy
 
 ## Essentials for computationally intensive psychological research
 
-- Computational resources
-- Technical expertise
+>- Computational resources
+>- Technical expertise
 
+## Create reproducible workflows
 
-## Attend to workflows
+Kitzes, J., Turek, D., & Deniz, F. (Eds.). (2018). The Practice of Reproducible Research: Case Studies and Lessons from the Data-Intensive Sciences. Oakland, CA: University of California Press. [E-book](https://www.gitbook.com/book/bids/the-practice-of-reproducible-research/details).
 
-- Kitzes, J., Turek, D., & Deniz, F. (Eds.). (2018). The Practice of Reproducible Research: Case Studies and Lessons from the Data-Intensive Sciences. Oakland, CA: University of California Press. [E-book](https://www.gitbook.com/book/bids/the-practice-of-reproducible-research/details).
-
-## Plan for **reproducible** research
+## Share materials, code, raw data
 
 <div class="centered">
 <img src="https://raw.githubusercontent.com/gilmore-lab/sips-2017-databservatory/master/img/databrary.splash.jpg"
@@ -699,8 +732,8 @@ f^2+y^2 & -xy & -fy
 
 ## Barriers to reproducibility
 
-- Cultural
 - Technological
+- Cultural
 
 ---
 
@@ -714,7 +747,13 @@ f^2+y^2 & -xy & -fy
 
 [Walter Mischel, 2009](https://www.psychologicalscience.org/observer/becoming-a-cumulative-science)
 
-##  Tools matter
+---
+
+> "Reviewers and editors want novel, interesting results. Why would I waste my time doing careful direct replications?"
+
+Any number of researchers I've talked with
+
+## Tools empower
 
 - [RStudio](http://rstudio.com) & [Project Jupyter](http://jupyter.org) and literate programming
 - git, GitHub and version control
@@ -791,6 +830,27 @@ This recent manifesto from Nature Human Behavior describes the risks to reproduc
 I urge you to read it.
 </div>
 
+---
+
+<div class="centered">
+<img src="https://previews.123rf.com/images/keng88/keng881302/keng88130200003/17772526-pile-of-collapsed-red-bricks-wall-Stock-Photo.jpg" height=550px>
+</div>
+
+<div class="notes">
+If each data point is a brick, a cumulative science of behavior would take each one and turn it into...
+</div>
+
+---
+
+<div class="centered">
+<img src="https://i.pinimg.com/736x/43/41/c0/4341c08aa295923d8a679a12797bd6da--brick-architecture-amazing-architecture.jpg" height=550px>
+</div>
+
+<div class="notes">
+beautiful, intricate structures of knowledge.
+So how do we build a cumulative science?
+</div>
+
 ## Collect & share video as data and documentation
 
 <div class="centered">
@@ -804,10 +864,28 @@ Karen Adolph at NYU is my partner in founding and directing the Databrary projec
 ## Increase sample sizes
 
 - Collect larger samples
-- Continue smaller samples, but...
-- Standardize metadata about participants, settings, measures & tasks to accelerate meta- and mega-analyses
 
-## Support data repositories
+<div class="centered">
+<img src="https://s31.postimg.org/y9ygb9cd7/studyswap.jpg" height=200px>
+</div>
+
+## Standardize metadata
+
+- participants (age, gender, race/ethnicity, ...)
+- settings (times, dates, places)
+- measures & tasks
+
+<div class="centered">
+<img src="https://s3.amazonaws.com/blog.puzzlenation.com/official-uk-puzzle-club.jpg" height=200px>
+</div>
+
+## Improve statistical practices
+
+- Automated checking of paper statistics (in American Psychological Association formats) via [Statcheck](http://statcheck.io)
+- Redefine "statistical significance" as $p<.005$? [(Benjamin et al., 2017)](https://dx.doi.org/10.17605/OSF.IO/MKY9J)
+- Or move away from NHST toward more robust and cumulative practices 
+
+## Store data, materials, code in repositories
 
 - Funder, journal mandates for sharing increasing
 - But no long-term, stable, funding sources for curation, archiving, sharing
@@ -819,6 +897,17 @@ Karen Adolph at NYU is my partner in founding and directing the Databrary projec
 
 - Data + analysis
 - e.g., PSU's [Biostars](https://www.biostars.org/)
+
+---
+
+<div class="centered">
+<img src="https://farm9.staticflickr.com/8732/17059467232_8205574673_o.png" height=550px>
+</div>
+
+<div class="notes">
+This is not pie in the sky.
+Let me tell you why.
+</div>
 
 ---
 
@@ -845,6 +934,12 @@ The Hubble Ultra Deep Field. Taken over 3.5 months in 2003-04. Contains an estim
 <img src="https://raw.githubusercontent.com/gilmore-lab/sips-2017-databservatory/master/img/thehumanproject.org.jpg" height=480px>
 </a>
 </div>
+
+---
+
+<img src="http://images.samsung.com/is/image/samsung/p5/levant/smartphones/phones-for-every-need-001.png?$ORIGIN_PNG$" width=200px>
+<img src="https://images-na.ssl-images-amazon.com/images/I/71fea9jTevL._SX425_.jpg" width=200px>
+<img src="http://media.thelisttv.com/photo/2017/03/09/poster_e0d492c7bf0147d2b0d8b736efd6be9a_56564413_ver1.0_640_480.jpeg" width=200px>
 
 ## Link measures across people
 
@@ -955,8 +1050,6 @@ But where we take off our opaque glasses and embrace the whole glorious animal.
 <div class="notes">
 Let's build it here.
 </div>
-
-# Thank you!
 
 ## Keep in touch {.vcenter .flexbox}
 

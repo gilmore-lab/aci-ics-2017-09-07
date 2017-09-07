@@ -443,6 +443,10 @@ style.innerHTML = style_script;
 document.getElementsByTagName('head')[0].appendChild(style);
 </script>
 
+    <script src="libs/htmlwidgets-0.9/htmlwidgets.js"></script>
+    <script src="libs/viz-0.3/viz.js"></script>
+    <link href="libs/DiagrammeR-styles-0.2/styles.css" rel="stylesheet" />
+    <script src="libs/grViz-binding-0.9.2/grViz.js"></script>
 </head>
 <body>
   <div class="reveal">
@@ -472,10 +476,10 @@ document.getElementsByTagName('head')[0].appendChild(style);
 <section><section id="the-reproducibility-crisis" class="titleslide slide level1"><h1>The reproducibility “crisis”</h1></section><section id="is-there-a-reproducibility-crisis" class="slide level2">
 <h1>Is there a reproducibility crisis?</h1>
 <ul>
-<li>Yes, a significant crisis</li>
-<li>Yes, a slight crisis</li>
-<li>No crisis</li>
-<li>Don’t know</li>
+<li class="fragment">Yes, a significant crisis</li>
+<li class="fragment">Yes, a slight crisis</li>
+<li class="fragment">No crisis</li>
+<li class="fragment">Don’t know</li>
 </ul>
 </section><section class="slide level2">
 
@@ -493,19 +497,10 @@ document.getElementsByTagName('head')[0].appendChild(style);
 <aside class="notes">
 
 </aside>
-</section><section class="slide level2">
-
-<div class="centered">
-<p><img src="https://cdn.shopify.com/s/files/1/0877/5762/products/Rigor_Mortis_1024x1024.jpg?v=1491240110" height=550px/></p>
-</div>
-<aside class="notes">
-<p>Clearly, the significant or slight crisis in reproducibility extends across scientific domains. Indeed, the NPR science reporter Richard Harris in a book published earlier this year said that sloppy biomedical research creates worthless cures, crushes hope, costs billions.</p>
-</aside>
 </section><section id="what-does-reproducibility-mean" class="slide level2">
 <h1>What does “reproducibility” mean?</h1>
-</section><section class="slide level2">
-
-<p>Should a published study contain sufficient information for an independent expert to reproduce the reported findings without consultation with or assistance from the original authors?</p>
+<!-- --- -->
+<!-- Should a published study contain sufficient information for an independent expert to reproduce the reported findings without consultation with or assistance from the original authors? -->
 </section><section id="methods-reproducibility" class="slide level2">
 <h1><em>Methods</em> reproducibility</h1>
 <ul>
@@ -549,6 +544,14 @@ document.getElementsByTagName('head')[0].appendChild(style);
 <li>“Hard” sciences, too</li>
 <li>Data collection to statistical analysis to reporting to publishing</li>
 </ul>
+</section><section class="slide level2">
+
+<div class="centered">
+<p><img src="https://cdn.shopify.com/s/files/1/0877/5762/products/Rigor_Mortis_1024x1024.jpg?v=1491240110" height=550px/></p>
+</div>
+<aside class="notes">
+<p>Clearly, the significant or slight crisis in reproducibility extends across scientific domains. Indeed, the NPR science reporter Richard Harris in a book published earlier this year said that sloppy biomedical research creates worthless cures, crushes hope, costs billions. But rather than cast aspersions on other fields, let me own the sins of my own.</p>
+</aside>
 </section></section>
 <section><section id="the-crisis-in-psychology" class="titleslide slide level1"><h1>The crisis in psychology</h1></section><section class="slide level2">
 
@@ -632,7 +635,7 @@ document.getElementsByTagName('head')[0].appendChild(style);
 </section><section class="slide level2">
 
 <div class="centered">
-<p><img src="https://vignette2.wikia.nocookie.net/minority-report/images/f/f0/Wally_and_the_Precogs.jpeg/revision/latest?cb=20170804220557" height=550></p>
+<p><img src="https://vignette.wikia.nocookie.net/45e9dc22-281b-41a5-93a7-f508a99b8722/scale-to-width-down/627" height=550></p>
 </div>
 <aside class="notes">
 <p>Yes, Bem was arguing for some sort of “Minority Report”-like evidence for precognition or ESP.</p>
@@ -646,8 +649,8 @@ document.getElementsByTagName('head')[0].appendChild(style);
 <aside class="notes">
 <p>But a careful, post-publication re-evaluation showed that Bem had made a number of small, defensible given current practices, errors that accumulated across his paper. None of them were picked up in review.</p>
 </aside>
-</section><section id="statistical-errors" class="slide level2">
-<h1>Statistical errors</h1>
+</section><section id="the-sin-of-hurrying" class="slide level2">
+<h1>The sin of hurrying…</h1>
 <div class="centered">
 <p><img src="https://static-content.springer.com/image/art%3A10.3758%2Fs13428-015-0664-2/MediaObjects/13428_2015_664_Fig3_HTML.gif" height=500px></p>
 </div>
@@ -655,8 +658,6 @@ document.getElementsByTagName('head')[0].appendChild(style);
 <aside class="notes">
 <p>Statistical reporting errors in the published literature are more common that many might think.</p>
 </aside>
-<!-- - Automated checking of paper statistics (in American Psychological Association formats) via [Statcheck](http://statcheck.io) -->
-<!-- - Redefine "statistical significance" as $p<.005$? [(Benjamin et al., 2017)](https://dx.doi.org/10.17605/OSF.IO/MKY9J) -->
 </section><section id="in-our-defense" class="slide level2">
 <h1>In our defense…</h1>
 </section><section id="behavior-multidimensional" class="slide level2">
@@ -712,6 +713,10 @@ document.getElementsByTagName('head')[0].appendChild(style);
 <div class="centered">
 <p><img src="http://ars.els-cdn.com/content/image/1-s2.0-S0960982211009377-gr1.jpg" height=500px> </br> <small>(<a href="https://doi.org/10.1016/j.cub.2011.08.031">Nishimoto et al., 2011</a>)</small></p>
 </div>
+</section><section class="slide level2">
+
+<div id="htmlwidget-3fde3d6fe9df79a8976c" style="width:768px;height:576px;" class="grViz html-widget"></div>
+<script type="application/json" data-for="htmlwidget-3fde3d6fe9df79a8976c">{"x":{"diagram":"\n  digraph {\n\t  style=filled\n\t\tcolor=lightgrey\n\t\tnode [style=filled, color=lightblue]\n    template -> {regis}\n\t\tperson_i -> {sMRI, fMRI, survey, task, meta}\n    sMRI -> regis\n    regis -> fMRI\n    {survey, task} -> cleaning\n    {fMRI, cleaning, meta} -> indiv_analysis\n\t\t}","config":{"engine":"dot","options":null}},"evals":[],"jsHooks":[]}</script>
 </section><section id="a-personal-example" class="slide level2">
 <h1>A personal example</h1>
 <ul>
@@ -794,6 +799,10 @@ document.getElementsByTagName('head')[0].appendChild(style);
 <div class="centered">
 <p><img src="https://raw.githubusercontent.com/gilmore-lab/temple-2017-02-27/master/img/mom-baby-carrier.jpg" height=350px> </br> <small> (<a href="http://doi.org/10.17910/B7.123">Adolph, 2015</a>) </small></p>
 </div>
+</section><section class="slide level2">
+
+<div id="htmlwidget-6ae921112a118231c0ea" style="width:768px;height:576px;" class="grViz html-widget"></div>
+<script type="application/json" data-for="htmlwidget-6ae921112a118231c0ea">{"x":{"diagram":"\n  digraph {\n\t  style=filled\n\t\tcolor=lightgrey\n\t\tnode [style=filled, color=lightblue]\n\t\t{mom_i, baby_i} -> video\n    video -> align_clip\n    align_clip -> ffmpeg\n    ffmpeg -> frame_seq\n    frame_seq -> {radial_filt, linear_filt, rot_filt}\n    {radial_filt, linear_filt, rot_filt} -> stats\n\t\t}","config":{"engine":"dot","options":null}},"evals":[],"jsHooks":[]}</script>
 </section><section id="frame-by-frame-video-analysis" class="slide level2">
 <h1>Frame-by-frame video analysis</h1>
 <div class="centered">
@@ -1010,16 +1019,14 @@ document.getElementsByTagName('head')[0].appendChild(style);
 </section><section id="essentials-for-computationally-intensive-psychological-research" class="slide level2">
 <h1>Essentials for computationally intensive psychological research</h1>
 <ul>
-<li>Computational resources</li>
-<li>Technical expertise</li>
+<li class="fragment">Computational resources</li>
+<li class="fragment">Technical expertise</li>
 </ul>
-</section><section id="attend-to-workflows" class="slide level2">
-<h1>Attend to workflows</h1>
-<ul>
-<li>Kitzes, J., Turek, D., &amp; Deniz, F. (Eds.). (2018). The Practice of Reproducible Research: Case Studies and Lessons from the Data-Intensive Sciences. Oakland, CA: University of California Press. <a href="https://www.gitbook.com/book/bids/the-practice-of-reproducible-research/details">E-book</a>.</li>
-</ul>
-</section><section id="plan-for-reproducible-research" class="slide level2">
-<h1>Plan for <strong>reproducible</strong> research</h1>
+</section><section id="create-reproducible-workflows" class="slide level2">
+<h1>Create reproducible workflows</h1>
+<p>Kitzes, J., Turek, D., &amp; Deniz, F. (Eds.). (2018). The Practice of Reproducible Research: Case Studies and Lessons from the Data-Intensive Sciences. Oakland, CA: University of California Press. <a href="https://www.gitbook.com/book/bids/the-practice-of-reproducible-research/details">E-book</a>.</p>
+</section><section id="share-materials-code-raw-data" class="slide level2">
+<h1>Share materials, code, raw data</h1>
 <div class="centered">
 <p><img src="https://raw.githubusercontent.com/gilmore-lab/sips-2017-databservatory/master/img/databrary.splash.jpg"
 </br> <small><a href="http://databrary.org">databrary.org</a></small></p>
@@ -1037,8 +1044,8 @@ document.getElementsByTagName('head')[0].appendChild(style);
 </section><section id="barriers-to-reproducibility" class="slide level2">
 <h1>Barriers to reproducibility</h1>
 <ul>
-<li>Cultural</li>
 <li>Technological</li>
+<li>Cultural</li>
 </ul>
 </section><section class="slide level2">
 
@@ -1051,8 +1058,14 @@ document.getElementsByTagName('head')[0].appendChild(style);
 <p>“…psychologists tend to treat other peoples’ theories like toothbrushes; no self-respecting individual wants to use anyone else’s.”</p>
 </blockquote>
 <p><a href="https://www.psychologicalscience.org/observer/becoming-a-cumulative-science">Walter Mischel, 2009</a></p>
-</section><section id="tools-matter" class="slide level2">
-<h1>Tools matter</h1>
+</section><section class="slide level2">
+
+<blockquote>
+<p>“Reviewers and editors want novel, interesting results. Why would I waste my time doing careful direct replications?”</p>
+</blockquote>
+<p>Any number of researchers I’ve talked with</p>
+</section><section id="tools-empower" class="slide level2">
+<h1>Tools empower</h1>
 <ul>
 <li><a href="http://rstudio.com">RStudio</a> &amp; <a href="http://jupyter.org">Project Jupyter</a> and literate programming</li>
 <li>git, GitHub and version control</li>
@@ -1119,6 +1132,22 @@ Reduce(function(...) { full_join(...) }, list(df1, df2, df3))
 <aside class="notes">
 <p>This recent manifesto from Nature Human Behavior describes the risks to reproducible science at every step of the process. I urge you to read it.</p>
 </aside>
+</section><section class="slide level2">
+
+<div class="centered">
+<p><img src="https://previews.123rf.com/images/keng88/keng881302/keng88130200003/17772526-pile-of-collapsed-red-bricks-wall-Stock-Photo.jpg" height=550px></p>
+</div>
+<aside class="notes">
+<p>If each data point is a brick, a cumulative science of behavior would take each one and turn it into…</p>
+</aside>
+</section><section class="slide level2">
+
+<div class="centered">
+<p><img src="https://i.pinimg.com/736x/43/41/c0/4341c08aa295923d8a679a12797bd6da--brick-architecture-amazing-architecture.jpg" height=550px></p>
+</div>
+<aside class="notes">
+<p>beautiful, intricate structures of knowledge. So how do we build a cumulative science?</p>
+</aside>
 </section><section id="collect-share-video-as-data-and-documentation" class="slide level2">
 <h1>Collect &amp; share video as data and documentation</h1>
 <div class="centered">
@@ -1131,11 +1160,29 @@ Reduce(function(...) { full_join(...) }, list(df1, df2, df3))
 <h1>Increase sample sizes</h1>
 <ul>
 <li>Collect larger samples</li>
-<li>Continue smaller samples, but…</li>
-<li>Standardize metadata about participants, settings, measures &amp; tasks to accelerate meta- and mega-analyses</li>
 </ul>
-</section><section id="support-data-repositories" class="slide level2">
-<h1>Support data repositories</h1>
+<div class="centered">
+<p><img src="https://s31.postimg.org/y9ygb9cd7/studyswap.jpg" height=200px></p>
+</div>
+</section><section id="standardize-metadata" class="slide level2">
+<h1>Standardize metadata</h1>
+<ul>
+<li>participants (age, gender, race/ethnicity, …)</li>
+<li>settings (times, dates, places)</li>
+<li>measures &amp; tasks</li>
+</ul>
+<div class="centered">
+<p><img src="https://s3.amazonaws.com/blog.puzzlenation.com/official-uk-puzzle-club.jpg" height=200px></p>
+</div>
+</section><section id="improve-statistical-practices" class="slide level2">
+<h1>Improve statistical practices</h1>
+<ul>
+<li>Automated checking of paper statistics (in American Psychological Association formats) via <a href="http://statcheck.io">Statcheck</a></li>
+<li>Redefine “statistical significance” as <span class="math inline">\(p&lt;.005\)</span>? <a href="https://dx.doi.org/10.17605/OSF.IO/MKY9J">(Benjamin et al., 2017)</a></li>
+<li>Or move away from NHST toward more robust and cumulative practices</li>
+</ul>
+</section><section id="store-data-materials-code-in-repositories" class="slide level2">
+<h1>Store data, materials, code in repositories</h1>
 <ul>
 <li>Funder, journal mandates for sharing increasing</li>
 <li>But no long-term, stable, funding sources for curation, archiving, sharing</li>
@@ -1154,6 +1201,14 @@ Reduce(function(...) { full_join(...) }, list(df1, df2, df3))
 </section><section class="slide level2">
 
 <div class="centered">
+<p><img src="https://farm9.staticflickr.com/8732/17059467232_8205574673_o.png" height=550px></p>
+</div>
+<aside class="notes">
+<p>This is not pie in the sky. Let me tell you why.</p>
+</aside>
+</section><section class="slide level2">
+
+<div class="centered">
 <p><img src="https://upload.wikimedia.org/wikipedia/commons/3/3f/HST-SM4.jpeg" height=550px></p>
 </div>
 </section><section class="slide level2">
@@ -1169,6 +1224,9 @@ Reduce(function(...) { full_join(...) }, list(df1, df2, df3))
 <div class="centered">
 <p><a href="http://www.thehumanproject.org"> <img src="https://raw.githubusercontent.com/gilmore-lab/sips-2017-databservatory/master/img/thehumanproject.org.jpg" height=480px> </a></p>
 </div>
+</section><section class="slide level2">
+
+<p><img src="http://images.samsung.com/is/image/samsung/p5/levant/smartphones/phones-for-every-need-001.png?$ORIGIN_PNG$" width=200px> <img src="https://images-na.ssl-images-amazon.com/images/I/71fea9jTevL._SX425_.jpg" width=200px> <img src="http://media.thelisttv.com/photo/2017/03/09/poster_e0d492c7bf0147d2b0d8b736efd6be9a_56564413_ver1.0_640_480.jpeg" width=200px></p>
 </section><section id="link-measures-across-people" class="slide level2">
 <h1>Link measures across people</h1>
 <div class="centered">
@@ -1324,38 +1382,48 @@ Reduce(function(...) { full_join(...) }, list(df1, df2, df3))
 <aside class="notes">
 <p>Let’s build it here.</p>
 </aside>
-</section></section>
-<section><section id="thank-you" class="titleslide slide level1"><h1>Thank you!</h1></section><section id="keep-in-touch" class="slide level2 vcenter flexbox">
+</section><section id="keep-in-touch" class="slide level2 vcenter flexbox">
 <h1>Keep in touch</h1>
 <h3 id="rogilmorepsu.edu"><a href="mailto:rogilmore@psu.edu">rogilmore@psu.edu</a></h3>
 <h3 id="gilmore-lab.github.io"><a href="http://gilmore-lab-github.io">gilmore-lab.github.io</a></h3>
 </section><section id="stack" class="slide level2">
 <h1>Stack</h1>
-<p>This talk was produced on 2017-09-06 in <a href="http://rstudio.com">RStudio Server Pro</a> using R Markdown and the reveal.JS framework on Penn State’s <a href="http://rstudio.aci.ics.psu.edu">ACI-ICS RStudio Server Pro instance</a>. The code and materials used to generate the slides may be found at <a href="https://github.com/gilmore-lab/aci-ics-2017-09-07/" class="uri">https://github.com/gilmore-lab/aci-ics-2017-09-07/</a>. Information about the R Session that produced the code is as follows:</p>
-<pre><code>## R version 3.4.0 (2017-04-21)
-## Platform: x86_64-redhat-linux-gnu (64-bit)
-## Running under: Red Hat Enterprise Linux Server release 6.9 (Santiago)
+<p>This talk was produced on 2017-09-07 in <a href="http://rstudio.com">RStudio Server Pro</a> using R Markdown and the reveal.JS framework on Penn State’s <a href="http://rstudio.aci.ics.psu.edu">ACI-ICS RStudio Server Pro instance</a>. The code and materials used to generate the slides may be found at <a href="https://github.com/gilmore-lab/aci-ics-2017-09-07/" class="uri">https://github.com/gilmore-lab/aci-ics-2017-09-07/</a>. Information about the R Session that produced the code is as follows:</p>
+<pre><code>## R version 3.4.1 (2017-06-30)
+## Platform: x86_64-apple-darwin15.6.0 (64-bit)
+## Running under: macOS Sierra 10.12.6
 ## 
 ## Matrix products: default
-## BLAS: /usr/lib64/R/lib/libRblas.so
-## LAPACK: /usr/lib64/R/lib/libRlapack.so
+## BLAS: /Library/Frameworks/R.framework/Versions/3.4/Resources/lib/libRblas.0.dylib
+## LAPACK: /Library/Frameworks/R.framework/Versions/3.4/Resources/lib/libRlapack.dylib
 ## 
 ## locale:
-##  [1] LC_CTYPE=en_US.UTF-8       LC_NUMERIC=C              
-##  [3] LC_TIME=en_US.UTF-8        LC_COLLATE=en_US.UTF-8    
-##  [5] LC_MONETARY=en_US.UTF-8    LC_MESSAGES=en_US.UTF-8   
-##  [7] LC_PAPER=en_US.UTF-8       LC_NAME=C                 
-##  [9] LC_ADDRESS=C               LC_TELEPHONE=C            
-## [11] LC_MEASUREMENT=en_US.UTF-8 LC_IDENTIFICATION=C       
+## [1] en_US.UTF-8/en_US.UTF-8/en_US.UTF-8/C/en_US.UTF-8/en_US.UTF-8
 ## 
 ## attached base packages:
 ## [1] stats     graphics  grDevices utils     datasets  methods   base     
 ## 
+## other attached packages:
+## [1] DiagrammeR_0.9.2 revealjs_0.9    
+## 
 ## loaded via a namespace (and not attached):
-##  [1] compiler_3.4.0  backports_1.1.0 magrittr_1.5    rprojroot_1.2  
-##  [5] tools_3.4.0     htmltools_0.3.6 revealjs_0.9    yaml_2.1.14    
-##  [9] Rcpp_0.12.12    stringi_1.1.5   rmarkdown_1.6   knitr_1.17     
-## [13] stringr_1.2.0   digest_0.6.12   evaluate_0.10.1</code></pre>
+##  [1] Rcpp_0.12.12       compiler_3.4.1     RColorBrewer_1.1-2
+##  [4] influenceR_0.1.0   plyr_1.8.4         bindr_0.1         
+##  [7] viridis_0.4.0      tools_3.4.1        digest_0.6.12     
+## [10] jsonlite_1.5       viridisLite_0.2.0  gtable_0.2.0      
+## [13] evaluate_0.10.1    tibble_1.3.3       rgexf_0.15.3      
+## [16] pkgconfig_2.0.1    rlang_0.1.2        igraph_1.1.2      
+## [19] rstudioapi_0.6     yaml_2.1.14        bindrcpp_0.2      
+## [22] gridExtra_2.2.1    downloader_0.4     dplyr_0.7.2       
+## [25] stringr_1.2.0      knitr_1.17         htmlwidgets_0.9   
+## [28] hms_0.3            grid_3.4.1         rprojroot_1.2     
+## [31] glue_1.1.1         R6_2.2.2           Rook_1.1-1        
+## [34] XML_3.98-1.9       rmarkdown_1.6      ggplot2_2.2.1     
+## [37] tidyr_0.6.3        purrr_0.2.3        readr_1.1.1       
+## [40] magrittr_1.5       backports_1.1.0    scales_0.5.0      
+## [43] htmltools_0.3.6    assertthat_0.2.0   colorspace_1.3-2  
+## [46] brew_1.0-6         stringi_1.1.5      visNetwork_2.0.1  
+## [49] lazyeval_0.2.0     munsell_0.4.3</code></pre>
 </section></section>
     </div>
   </div>
