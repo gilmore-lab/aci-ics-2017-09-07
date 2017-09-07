@@ -1,7 +1,7 @@
 ---
 title: "Reproducibility in Computationally-Intensive Behavioral Research"
 author: "Rick O. Gilmore"
-date: "8/22/2017"
+date: "`r Sys.time()`"
 output:
   revealjs::revealjs_presentation:
     self_contained: false
@@ -75,7 +75,7 @@ Nature conducted a survey of some 1,600 scientists in 2016. They were asked this
 ---
 
 <div class="centered">
-<img src="http://www.nature.com/polopoly_fs/7.36718.1464174471!/image/reproducibility-graphic-online3.jpg_gen/derivatives/landscape_630/reproducibility-graphic-online3.jpg"" height=550px>
+<img src="http://www.nature.com/polopoly_fs/7.36718.1464174471!/image/reproducibility-graphic-online3.jpg_gen/derivatives/landscape_630/reproducibility-graphic-online3.jpg"" height=600px>
 </br>
 <small>([Baker, 2016](http://doi.org/10.1038/533452a))</small>
 </div>
@@ -100,6 +100,15 @@ Nature conducted a survey of some 1,600 scientists in 2016. They were asked this
 Goodman et al. advocate a new lexicon for reproducibility where...
 </div>
 
+---
+
+<div class="centered">
+<img src="http://lh6.ggpht.com/_KVa1Tk_k1BU/TTjL-RSY_eI/AAAAAAAABtg/VQIfae1_wtQ/hit_thumb%5B3%5D.jpg?imgmax=800" height=550>
+</div>
+
+<div class="notes">
+I like to call this the "hit by a truck" scenario.
+</div>
 ## *Results* reproducibility
 
 - Same results from independent study
@@ -123,7 +132,7 @@ Goodman et al. advocate a new lexicon for reproducibility where...
 ---
 
 <div class="centered">
-<img src="http://www.nature.com/polopoly_fs/7.36719.1464174488!/image/reproducibility-graphic-online4.jpg_gen/derivatives/landscape_630/reproducibility-graphic-online4.jpg" height=550px>
+<img src="http://www.nature.com/polopoly_fs/7.36719.1464174488!/image/reproducibility-graphic-online4.jpg_gen/derivatives/landscape_630/reproducibility-graphic-online4.jpg" height=600px>
 </br>
 <small>([Baker, 2016](http://doi.org/10.1038/533452a))</small>
 </div>
@@ -271,7 +280,7 @@ But a careful, post-publication re-evaluation showed that Bem had made a number 
 ## The sin of hurrying...
 
 <div class="centered">
-<img src="https://static-content.springer.com/image/art%3A10.3758%2Fs13428-015-0664-2/MediaObjects/13428_2015_664_Fig3_HTML.gif" height=500px>
+<img src="https://static-content.springer.com/image/art%3A10.3758%2Fs13428-015-0664-2/MediaObjects/13428_2015_664_Fig3_HTML.gif" height=550px>
 </div>
 
 <small>([Nuijten et al., 2015](http://doi.org/10.3758/s13428-015-0664-2))</small>
@@ -285,7 +294,7 @@ Statistical reporting errors in the published literature are more common that ma
 ## Behavior multidimensional
 
 <div class="centered">
-<video data-autoplay width="700" height="450" controls>
+<video data-autoplay height="550" controls>
   <source src="https://nyu.databrary.org/slot/11652/307774,376273/asset/47075/download?inline=true" type="video/mp4">
 Your browser does not support the video tag.
 </video>
@@ -380,7 +389,7 @@ grViz("
 ---
 
 <div class="centered">
-<video width="750" height="450" controls>
+<video data-autoplay loop height="550" controls>
   <source src="https://nyu.databrary.org/slot/9825/-/asset/11645/download?inline=true" type="video/mp4">
   Your browser does not support the video tag.
 </video>
@@ -435,7 +444,7 @@ Using computer-generated displays like this.
 ---
 
 <div class="centered">
-<video width="750" height="450" controls>
+<video data-autoplay height="550" controls>
   <source src="https://nyu.databrary.org/slot/7740/0,24634/asset/16751/download?inline=true" type="video/mp4">
   Your browser does not support the video tag.
 </video>
@@ -452,7 +461,7 @@ What if I had first-person, observer's-eye views of what infants saw...
 ---
 
 <div class="centered">
-<video data-autoplay width="750" height="450" controls>
+<video data-autoplay height="550" controls>
   <source src="https://nyu.databrary.org/slot/7740/0,24200/asset/16753/download?inline=true" type="video/mp4">
   Your browser does not support the video tag.
 </video>
@@ -495,7 +504,7 @@ grViz("
 ## Frame-by-frame video analysis
 
 <div class="centered"> 
-<video width="640" height="480" controls>
+<video data-autoplay height="550" controls>
   <source src="https://nyu.databrary.org/slot/11680/0,24500/asset/41871/download?inline=true" type="video/mp4">
   Your browser does not support the video tag.
 </video>
@@ -510,7 +519,7 @@ grViz("
 ---
 
 <div class="centered">
-<video width="640" height="480" controls>
+<video data-autoplay height="550" controls>
   <source src="https://nyu.databrary.org/slot/11680/25500,50000/asset/41873/download?inline=true" type="video/mp4">
   Your browser does not support the video tag.
 </video>
@@ -544,7 +553,7 @@ grViz("
 ## Are "fast" flow speeds common?
 
 <div class="centered">
-<video width="532" height="400" controls>
+<video data-autoplay height="550" controls>
   <source src="https://nyu.databrary.org/slot/11630/1567557,1747248/asset/39854/download?inline=true" type="video/mp4">
   Your browser does not support the video tag.
 </video>
@@ -665,7 +674,7 @@ f^2+y^2 & -xy & -fy
 </small>
 </div>
 
-## Parameters for Simulation
+---
 
 | Geometric Feature        | Distance |
 |--------------------------|----------|
@@ -685,10 +694,10 @@ f^2+y^2 & -xy & -fy
 </small>
 </div>
 
-## Flow Direction Distributions by Geometry & Posture {.smaller}
+---
 
 <div class="centered">
-<img src='https://raw.githubusercontent.com/gilmore-lab/temple-2017-02-27/master/img/simulation-flow-direction-hist.png' width=600px/>
+<img src='https://raw.githubusercontent.com/gilmore-lab/temple-2017-02-27/master/img/simulation-flow-direction-hist.png' width=800px/>
 </br>
 <small>
 ([Gilmore et al, 2015](http://doi.org/10.1109/DEVLRN.2015.7345450))
@@ -727,7 +736,8 @@ Kitzes, J., Turek, D., & Deniz, F. (Eds.). (2018). The Practice of Reproducible 
 - Open sharing among *authorized researchers*, not public
 - Share identifiable data *with permission*
 - Store, search across, filter among participant & session characteristics
-- Active (during study) curation reduces post hoc burden
+- Active (during study) curation reduces *post hoc* burden
+- [Gilmore, Kennedy, & Adolph, 2017](http://psyarxiv.com/kew8u)
 
 ## What I've learned
 
@@ -864,11 +874,11 @@ Karen Adolph at NYU is my partner in founding and directing the Databrary projec
 
 ## Increase sample sizes
 
-- Collect larger samples
-
 <div class="centered">
-<img src="https://s31.postimg.org/y9ygb9cd7/studyswap.jpg" height=200px>
+<img src="https://s31.postimg.org/y9ygb9cd7/studyswap.jpg" height=500px>
 </div>
+
+Or, ["Building a CERN for Psychological Science"](https://christopherchartier.com/2017/08/26/building-a-cern-for-psychological-science/)
 
 ## Standardize metadata
 
@@ -877,17 +887,18 @@ Karen Adolph at NYU is my partner in founding and directing the Databrary projec
 - measures & tasks
 
 <div class="centered">
-<img src="https://s3.amazonaws.com/blog.puzzlenation.com/official-uk-puzzle-club.jpg" height=200px>
+<img src="https://s3.amazonaws.com/blog.puzzlenation.com/official-uk-puzzle-club.jpg" height=350px>
 </div>
 
 ## Improve statistical practices
 
 - Automated checking of paper statistics (in American Psychological Association formats) via [Statcheck](http://statcheck.io)
 - Redefine "statistical significance" as $p<.005$? [(Benjamin et al., 2017)](https://dx.doi.org/10.17605/OSF.IO/MKY9J)
-- Or move away from NHST toward more robust and cumulative practices 
+- Or move away from [NHST](https://en.wikipedia.org/wiki/Statistical_hypothesis_testing) toward more robust and cumulative practices (Bayesian, CI/effect-size-driven) 
 
 ## Store data, materials, code in repositories
 
+- Data libraries
 - Funder, journal mandates for sharing increasing
 - But no long-term, stable, funding sources for curation, archiving, sharing
 - ArXiv model
@@ -986,7 +997,7 @@ Your browser does not support the video tag.
 </a>
 </div>
 
-## Self/active curation of data, materials
+## Curate data & materials as they are generated
 
 <div class="centered">
 <img src="https://raw.githubusercontent.com/gilmore-lab/sips-2017-databservatory/master/img/osf-io.jpg" height=500px/>
